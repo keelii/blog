@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+<div id="main">
+    <div id="content">
+        <div class="blog-index">
+            {{ $paginator := .Paginate (where .Data.Pages "Type" "articles") }}
+            {{ range $paginator.Pages }}
+            <article>
+                <header>
+                    <h1>
+                        <div class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+                    </h1>
+                    <p class="meta">
+                        <time class="entry-date"></time>
+                    </p>
+                </header>
+                <div class="entry-content">{{ .Content }}</div>
+                <footer>
+                    <a href="" rel="full-article">Read More »</a>
+                </footer>
+            </article>
+            {{ end }}
+
+            {{ if gt $paginator.TotalPages 1 }}
+            <div class="pagination">
+                {{ if $paginator.HasNext }}
+                <a class="prev" href="{{ $paginator.Next.URL }}">← Older</a>
+                {{ end }}
+                <a href="/archives">Blog Archives</a>
+                {{ if $paginator.HasPrev }}
+                <a class="next" href="{{ $paginator.Prev.URL }}">Newer →</a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <aside class="sidebar"></aside>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
+
