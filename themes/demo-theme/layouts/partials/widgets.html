@@ -1,0 +1,25 @@
+{{ if eq .Site.Params.sidebar.recent true }}
+<section class="odd">
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+        {{ range first .Site.Params.sidebar.recentCount .Site.Pages }}
+        <li class="post">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
+
+{{ if eq .Site.Params.sidebar.category true }}
+<section class="even">
+    <h1>Categories</h1>
+    <ul id="category-list">
+        {{ range $name, $items := .Site.Taxonomies.categories }}
+        <li>
+            <li><a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a> </li>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}

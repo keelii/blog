@@ -1,7 +1,8 @@
 +++
 date = "2016-10-14T13:26:24+08:00"
 title = "first"
-
+categories = ["software"]
+tags = ["mac", "apple"]
 +++
 
 # my first article

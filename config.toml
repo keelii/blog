@@ -7,17 +7,39 @@ theme = "demo-theme"
 Paginate = 2
 GoogleAnalytics = "UA-79264835-1"
 
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+
+[[menu.main]]
+    Name = "Blog"
+    URL = "/"
+    weight = 1
+
+[[menu.main]]
+    Name = "Archives"
+    URL = "/articles"
+    weight = 2
+
+
 [params]
     author = "keelii"
     subtitle = "There are always __ you don't know yet"
+    searchUrl = "https://www.google.com/search"
     scripts = [
         "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",
         "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
     ]
     stylesheets = [
-        "//fonts.lug.ustc.edu.cn/css?family=PT+Serif:regular,italic,bold,bolditalic",
-        "//fonts.lug.ustc.edu.cn/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        # "//fonts.lug.ustc.edu.cn/css?family=PT+Serif:regular,italic,bold,bolditalic",
+        # "//fonts.lug.ustc.edu.cn/css?family=PT+Sans:regular,italic,bold,bolditalic"
     ]
     modernizr = "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
+
+[params.sidebar]
+    recent = true
+    recentCount = 5
+
+    category = true
 
 

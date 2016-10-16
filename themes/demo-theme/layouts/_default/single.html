@@ -1,8 +1,43 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title }}</h1>
-<h6>{{ .Date.Format "Mon, Jan 2, 2006" }}</h6>
-{{ .Content }}
-<h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
+<div id="main">
+    <div id="content">
+        <div>
+            <article class="hentry" role="article">
+                <header>
+                    <h1 class="entry-title">{{ .Title }}</h1>
+                    <p class="meta">
+                        <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+                            <span class="date">{{ .Date.Format "01, 02, 2006" }}</span>
+                            <span class="time">{{ .Date.Format "15:04 PM" }}</span>
+                        </time>
+                    </p>
+                </header>
+
+                <div class="entry-content">{{ .Content }}</div>
+                <footer>
+                    <p class="meta">
+                        <span class="byline author vcard">
+                            Posted by <span class="fn"></span>
+                        </span>
+                        <time class="entry-date" datetime="{{ .PublishDate }}"><span class="date">10,04,2016</span>  <span class="time">5:22 pm</span>
+                        </time>
+                        <span class="categories">
+                            {{ range .Params.categories }}
+                            <a class="category" href="{{ "/categories/"  }}">{{ . }}</a>
+                            {{ end }}
+                        </span>
+                    </p>
+                    <p class="meta">
+                        <a class="basic-alignment left" href="/2016/09/29/javascript-browser-event/" title="Previous Post: JavaScript 浏览器事件解析">« JavaScript 浏览器事件解析</a>
+                    </p>
+                </footer>
+            </article>
+            {{ partial "disques.html" . }}
+        </div>
+
+        {{ partial "sidebar.html" . }}
+    </div>
+</div>
 
 {{ partial "footer.html" . }}

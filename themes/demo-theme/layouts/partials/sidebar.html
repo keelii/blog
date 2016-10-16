@@ -1,0 +1,7 @@
+<aside class="sidebar">
+    {{ if .IsPage }}
+        {{ partial "toc.html" . }}
+    {{ else }}
+        {{ partial "widgets.html" . }}
+    {{ end }}
+</aside>

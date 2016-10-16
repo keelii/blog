@@ -11,13 +11,18 @@
                         <div class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
                     </h1>
                     <p class="meta">
-                        <time class="entry-date"></time>
+                        <time class="entry-date" datetime="{{ .PublishDate }}">
+                            <span class="date">10,04,2016</span>
+                            <span class="time">5:22 pm</span>
+                        </time>
                     </p>
                 </header>
-                <div class="entry-content">{{ .Content }}</div>
+                <div class="entry-content">{{ .Summary }}</div>
+                {{ if .Truncated }}
                 <footer>
-                    <a href="" rel="full-article">Read More »</a>
+                    <a href="{{ .RelPermalink }}" rel="full-article">Read More »</a>
                 </footer>
+                {{ end }}
             </article>
             {{ end }}
 
@@ -33,7 +38,8 @@
             </div>
             {{ end }}
         </div>
-        <aside class="sidebar"></aside>
+
+        {{ partial "sidebar.html" . }}
     </div>
 </div>
 
