@@ -1,11 +1,15 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 title = "Something"
+isCJKLanguage = true
 languageCode = "en-us"
 
 theme = "demo-theme"
 
 Paginate = 2
 GoogleAnalytics = "UA-79264835-1"
+
+[permalinks]
+    articles = "/:year/:month/:filename/"
 
 [taxonomies]
     tag = "tags"
@@ -21,10 +25,10 @@ GoogleAnalytics = "UA-79264835-1"
     URL = "/articles"
     weight = 2
 
-
 [params]
     author = "keelii"
-    subtitle = "There are always __ you don't know yet"
+    description  = "There are always __ you don't know yet"
+    htmlLang = "zh-CN"
     searchUrl = "https://www.google.com/search"
     scripts = [
         "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",

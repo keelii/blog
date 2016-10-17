@@ -1,7 +1,7 @@
 +++
 date = "2016-10-14T17:13:20+08:00"
 title = "third"
-
+categories = ["devfe", "f2e" , "css"]
 +++
 
 # third articles

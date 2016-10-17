@@ -11,9 +11,9 @@
                         <div class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
                     </h1>
                     <p class="meta">
-                        <time class="entry-date" datetime="{{ .PublishDate }}">
-                            <span class="date">10,04,2016</span>
-                            <span class="time">5:22 pm</span>
+                        <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+                            <span class="date">{{ .Date.Format "Jan, 2, 2006" }}</span>
+                            <span class="time">{{ .Date.Format "15:04 PM" }}</span>
                         </time>
                     </p>
                 </header>
@@ -31,7 +31,7 @@
                 {{ if $paginator.HasNext }}
                 <a class="prev" href="{{ $paginator.Next.URL }}">← Older</a>
                 {{ end }}
-                <a href="/archives">Blog Archives</a>
+                <a href="{{ "/articles" | absURL }}">Blog Archives</a>
                 {{ if $paginator.HasPrev }}
                 <a class="next" href="{{ $paginator.Prev.URL }}">Newer →</a>
                 {{ end }}
