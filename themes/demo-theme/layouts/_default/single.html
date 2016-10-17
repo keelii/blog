@@ -37,10 +37,15 @@
                     </p>
                     <p class="meta">
                         {{ if .PrevInSection }}
-                        <a class="basic-alignment left" href="{{ .PrevInSection.Permalink }}" title="Previous Post: {{ .PrevInSection.Title }}">« {{ .PrevInSection.Title }}</a>
+                        <span class="basic-alignment left">
+                            &laquo; <a href="{{ .PrevInSection.Permalink }}" title="Previous Post: {{ .PrevInSection.Title }}">{{ .PrevInSection.Title }}</a>
+                        </span>
                         {{ end }}
+
                         {{ if .NextInSection }}
-                        <a class="basic-alignment left" href="{{ .NextInSection.Permalink }}" title="Nextious Post: {{ .NextInSection.Title }}">{{ .NextInSection.Title }} »</a>
+                        <span class="basic-alignment right">
+                            <a href="{{ .NextInSection.Permalink }}" title="Nextious Post: {{ .NextInSection.Title }}">{{ .NextInSection.Title }}</a> &raquo;
+                        </span>
                         {{ end }}
                     </p>
                 </footer>
@@ -53,3 +58,5 @@
 </div>
 
 {{ partial "footer.html" . }}
+
+<script>if (typeof hljs) hljs.initHighlightingOnLoad();</script>

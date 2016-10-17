@@ -23,14 +23,26 @@
     <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
     <link href="{{ "/stylesheets/screen.css" | absURL }}" media="screen, projection" rel="stylesheet" type="text/css">
-    {{- range .Site.Params.stylesheets }}
+    {{- range .Site.Params.styles }}
     <link href="{{ . }}" rel="stylesheet" type="text/css">
     {{- end }}
+
+    {{ if .IsPage }}
+    {{- range .Site.Params.pageStyles }}
+    <link href="{{ . }}" rel="stylesheet" type="text/css">
+    {{- end }}
+    {{ end }}
 
     {{- range .Site.Params.scripts }}
     <script src="{{ . }}"></script>
     {{- end }}
     <script src="{{ "/javascripts/octopress.js" | absURL }}"></script>
+
+    {{ if .IsPage }}
+    {{- range .Site.Params.pageScripts }}
+    <script src="{{ . }}"></script>
+    {{- end }}
+    {{ end }}
 
     <!-- <meta property="wb:webmaster" content="9e54d7323cc6a75d" /> -->
     {{ partial "google_analytics.html" . }}

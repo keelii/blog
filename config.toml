@@ -5,8 +5,10 @@ languageCode = "en-us"
 
 theme = "demo-theme"
 
-Paginate = 2
+Paginate = 4
 GoogleAnalytics = "UA-79264835-1"
+
+
 
 [permalinks]
     articles = "/:year/:month/:filename/"
@@ -27,18 +29,25 @@ GoogleAnalytics = "UA-79264835-1"
 
 [params]
     author = "keelii"
-    description  = "There are always __ you don't know yet"
+    description  = "There's always __ you do not know yet"
     htmlLang = "zh-CN"
     searchUrl = "https://www.google.com/search"
+
+    pageScripts = [
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"
+    ]
+    pageStyles = [
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-dark.min.css"
+    ]
+
     scripts = [
         "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",
         "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
     ]
-    stylesheets = [
-        # "//fonts.lug.ustc.edu.cn/css?family=PT+Serif:regular,italic,bold,bolditalic",
-        # "//fonts.lug.ustc.edu.cn/css?family=PT+Sans:regular,italic,bold,bolditalic"
+    styles = [
+        "//fonts.lug.ustc.edu.cn/css?family=PT+Serif:regular,italic,bold,bolditalic",
+        "//fonts.lug.ustc.edu.cn/css?family=PT+Sans:regular,italic,bold,bolditalic"
     ]
-    modernizr = "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
 
 [params.sidebar]
     recent = true
