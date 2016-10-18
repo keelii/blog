@@ -2,7 +2,7 @@
 <section class="odd">
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
-        {{ range first .Site.Params.sidebar.recentCount .Site.Pages }}
+        {{ range first .Site.Params.sidebar.recentCount (where .Data.Pages "Section" "articles") }}
         <li class="post">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>

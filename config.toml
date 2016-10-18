@@ -7,11 +7,11 @@ theme = "demo-theme"
 
 Paginate = 4
 GoogleAnalytics = "UA-79264835-1"
-
+DisqusShortname = "keelii-blog"
 
 
 [permalinks]
-    articles = "/:year/:month/:filename/"
+    articles = "/:year/:month/:day/:filename/"
 
 [taxonomies]
     tag = "tags"
@@ -26,6 +26,12 @@ GoogleAnalytics = "UA-79264835-1"
     Name = "Archives"
     URL = "/articles"
     weight = 2
+
+
+[[menu.main]]
+    Name = "About"
+    URL = "/about"
+    weight = 3
 
 [params]
     author = "keelii"

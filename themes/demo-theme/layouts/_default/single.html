@@ -8,7 +8,7 @@
                     <h1 class="entry-title">{{ .Title }}</h1>
                     <p class="meta">
                         <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-                            <span class="date">{{ .Date.Format "1.2 2006" }}</span>
+                            <span class="date">{{ .Date.Format "Jan,2 2006" }}</span>
                             <span class="time">{{ .Date.Format "15:04 PM" }}</span>
                         </time>
                     </p>
@@ -32,7 +32,7 @@
                         <span class="span">Last Modified</span>
                         <time class="entry-date" datetime="{{ .Lastmod.Format "2006-01-02 15:04:05" }}">
                             <span class="time">{{ .Lastmod.Format "PM 15:04" }}</span>
-                            <span class="date">{{ .Lastmod.Format "1.2 2006" }}</span>
+                            <span class="date">{{ .Lastmod.Format "Jan,2 2006" }}</span>
                         </time>
                     </p>
                     <p class="meta">
@@ -50,7 +50,7 @@
                     </p>
                 </footer>
             </article>
-            {{ partial "disques.html" . }}
+            {{ partial "disqus.html" . }}
         </div>
 
         {{ partial "sidebar.html" . }}

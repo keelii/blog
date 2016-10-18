@@ -1,7 +1,8 @@
 +++
-title = "JavaScript 节流函数 throttle 详解"
 date = "2016-06-11 6:52:57 +0800"
+title = "JavaScript 节流函数 throttle 详解"
 categories = ["javascript"]
+tags = ["javascript","throttle"]
 +++
 
 在浏览器 DOM 事件里面，有一些事件会随着用户的操作不间断触发。比如：重新调整浏览器窗口大小（resize），浏览器页面滚动（scroll），鼠标移动（mousemove）。也就是说用户在触发这些浏览器操作的时候，如果脚本里面绑定了对应的事件处理方法，这个方法就不停的触发。
