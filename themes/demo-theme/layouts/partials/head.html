@@ -6,7 +6,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>{{ .Title }}</title>
+    <title>{{ .Title | title }}</title>
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
     <meta name="author" content="{{ .Site.Params.author }}">

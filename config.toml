@@ -1,7 +1,7 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 title = "Something"
 isCJKLanguage = true
-languageCode = "en-us"
+languageCode = "zh-CN"
 
 theme = "demo-theme"
 
@@ -9,9 +9,8 @@ Paginate = 4
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
 
-
 [permalinks]
-    articles = "/:year/:month/:day/:filename/"
+    archives = "/:year/:month/:day/:filename/"
 
 [taxonomies]
     tag = "tags"
@@ -24,7 +23,7 @@ DisqusShortname = "keelii-blog"
 
 [[menu.main]]
     Name = "Archives"
-    URL = "/articles"
+    URL = "/archives"
     weight = 2
 
 

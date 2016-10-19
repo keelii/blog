@@ -2,10 +2,15 @@
 
 <div id="main">
     <div id="content">
+
         <div>
             <article role="article">
                 <header>
-                    <h1 class="entry-title">Blog Archive</h1>
+                    {{ if (.Data.Plural) }}
+                    <h1>{{ .Data.Singular | title }}: {{ .Title }}</h1>
+                    {{ else }}
+                    <h1 class="entry-title {{ .Section }}">Blog Archive </h1>
+                    {{ end }}
                 </header>
                 <div id="blog-archives">
                     {{ range .Data.Pages.GroupByDate "2006" }}

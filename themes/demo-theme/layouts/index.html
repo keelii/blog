@@ -3,7 +3,7 @@
 <div id="main">
     <div id="content">
         <div class="blog-index">
-            {{ $paginator := .Paginate (where .Data.Pages "Type" "articles") }}
+            {{ $paginator := .Paginate (where .Data.Pages "Type" "archives") }}
             {{ range $paginator.Pages }}
             <article>
                 <header>
@@ -31,7 +31,7 @@
                 {{ if $paginator.HasNext }}
                 <a class="prev" href="{{ $paginator.Next.URL }}">← Older</a>
                 {{ end }}
-                <a href="{{ "/articles" | absURL }}">Blog Archives</a>
+                <a href="{{ "/archives" | absURL }}">Blog Archives</a>
                 {{ if $paginator.HasPrev }}
                 <a class="next" href="{{ $paginator.Prev.URL }}">Newer →</a>
                 {{ end }}

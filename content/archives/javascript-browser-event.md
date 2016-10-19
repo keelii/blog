@@ -1,6 +1,7 @@
 +++
 date = "2016-09-29 17:22:29 +0800"
 title = "JavaScript 浏览器事件"
+isCJKLanguage = true
 categories = ["JavaScript Event"]
 tags = []
 +++
@@ -14,7 +15,7 @@ JavaScript 程序采用了异步事件驱动编程（Event-driven programming）
 <!--more-->
 简页言之，在 web 前端编程里面 JavaScript 通过浏览器提供的事件模型 API 和用户交互，接收用户的输入
 
-另一方面用户的行为是不确定的，也就是说不知道用户什么时候发生点击、滚动这些动作。这种场景是传统的同步编程模型没法解决的，因为你不可能等用户操作完了才执行后面的代码
+由于用户的行为是不确定的，也就是说不知道用户什么时候发生点击、滚动这些动作。这种场景是传统的同步编程模型没法解决的，因为你不可能等用户操作完了才执行后面的代码
 
 比如我们在 Python 里面调用接收用户输入的方法 `raw_input()` 后终端就会一直等待用户的输入，直到输入完成才会执行后面的代码逻辑。但是在下面这段 NodeJS 代码中，接收用户输入的方法 `process.stdin.read` 是在一个事件中调用的。后面的代码不会被阻塞（blocked）
 
@@ -35,13 +36,13 @@ process.stdin.on('end', () => {
 console.log('Will not be blocked');
 ```
 
-事件驱动程序模型基本的实现原理基本上都是使用 [事件循环（Event Loop）](https://www.youtube.com/watch?v=8aGhZQkoFbQ)，这部分内容涉及浏览器事件模型、回调原理，有兴趣的去链接里面学习下
+事件驱动程序模型基本的实现原理基本上都是使用 [事件循环（Event Loop）](https://www.youtube.com/watch?v=8aGhZQkoFbQ)，这部分内容涉及浏览器事件模型、回调原理，有兴趣的去看链接里面的视频学习下
 
 需要说明的是在客户端 JavaScript 中像 setTimeout, XMLHTTPRequest 这类 API **并不是** JavaScript 语言本身就有的。而是 JavaScript 的宿主环境（在客户端 JavaScript 中就是浏览器），同样像 DOM、BOM、Event API 都是浏览器提供的
 
-### 事件绑定的方法
+## 事件绑定的方法
 
-#### DOM 元素行内绑定
+### DOM 元素行内绑定
 
 直接在 DOM 元素上通过设置 `on + eventType` 来绑定事件处理程序
 
@@ -51,16 +52,16 @@ console.log('Will not be blocked');
 
 这种绑定方法是最原始的，有两个缺点：
 
-1. 事件处理程序和 HTML 结构混杂在一起
+**1 事件处理程序和 HTML 结构混杂在一起**
 
-早期在结构、样式、表现分离的时代被视为最佳实践，现在看来在很多 MVX 框架中将事件绑定和 DOM 结构放在一起处理，这样似乎更方便维护（不用来回切换 HTML,JavaScript 文件），而且也符合可预见（predictable）性的规则
+早期在结构、样式、表现分离的时代很忌讳这一点。现在看来在很多 MVX 框架中将事件绑定和 DOM 结构放在一起处理，这样似乎更方便维护（不用来回切换 HTML,JavaScript 文件），而且也符合可预见（predictable）性的规则
 
-2. 命名空间冲突
+**2 命名空间冲突**
 
 因为 `onclick` 中的 JavaScript 代码片段执行环境是全局作用域。然而在 JavaScript 语言中并没有相关的命名空间特性。所以就很容易造成命名空间的冲突，非要用这种方法绑定事件的话只能用对象来做一些封装
 
 
-#### 古老的绑定方法
+### 古老的绑定方法
 
 使用 DOM Element 上面的 `on + eventType` 属性 API
 
@@ -75,8 +76,7 @@ console.log('Will not be blocked');
 
 这种方法也有一个缺点，因为属性赋值会覆盖原值的。所以无法绑定 **多个** 事件处理函数，如果我们要注册多个 onload 事件处理程序的话就得自己封装一个方法来防止这种事情发生，下面这个例子可以解决这个问题
 
-```html
-<script>
+```javascript
 function addLoadEvent(fn) {
     var oldonLoad = window.onload;
     if (typeof oldonLoad !== 'function') {
@@ -91,73 +91,102 @@ function addLoadEvent(fn) {
 
 addLoadEvent(function() { alert('onload 1') });
 addLoadEvent(function() { alert('onload 2') });
-</script>
 ```
 
 注意这只是个示例，生产环境很少会用到。一般用 DOM Ready 就可以了，因为 JavaScript 的执行通常不用等到页面资源全部加载完，DOM 加载完就可以了
 
-#### 现代/标准的绑定方法
+### 现代/标准的绑定方法
 
 标准的绑定方法有两种，`addEventListener` 和 `attachEvent` 前者是标准浏览器支持的 API，后者是 IE 8 以下浏览器支持的 API。通常需要我们做个兼容封装
 
-```html
-<script>
-    function addEvent(target, type, handler) {
-        if (target.addEventListener) {
-            target.addEventListener(type, handler, false);
-        } else {
-            target.attachEvent('on' + type, handler)
-        }
+```javascript
+function addEvent(target, type, handler) {
+    if (target.addEventListener) {
+        target.addEventListener(type, handler, false);
+    } else {
+        target.attachEvent('on' + type, handler)
     }
+}
 
-    addEvent(document, 'click', function() { alert(this === document) });
-    addEvent(document, 'click', function() { alert(this === document) });
-</script>
+addEvent(document, 'click', function() { alert(this === document) });
+addEvent(document, 'click', function() { alert(this === document) });
 ```
 
-上面的例子在 IE 8 以下和标准浏览器的效果是不一样的，问题就在于 `addEventListener` 中的事件回调函数中的 this 指向元素（target）本身，而 `attachEvent` 则指向 `window` 为了修复这个问题上面的 attachEvent 可以做一点小调整让其保持和 `addEventListener` 的效果一样，不过这样的话注册的 handler 就是个匿名函数，无法再移除！
+上面的例子在 IE 8 以下和标准浏览器的效果是不一样的，问题就在于 `addEventListener` 中的事件回调函数中的 this 指向元素（target）本身，而 `attachEvent` 则指向 `window` 为了修复这个问题上面的 attachEvent 可以做一点小调整让其保持和 `addEventListener` 的效果一样，不过这样的话注册的 handler 就是个匿名函数，**无法移除**！
 
-```html
-<script>
-    function addEvent(target, type, handler) {
-        if (target.addEventListener) {
-            target.addEventListener(type, handler, false);
-        } else {
-            target.attachEvent('on' + type, function() {
-                return handler.call(target)
-            });
-        }
+```javascript
+function addEvent(target, type, handler) {
+    if (target.addEventListener) {
+        target.addEventListener(type, handler, false);
+    } else {
+        target.attachEvent('on' + type, function() {
+            return handler.call(target)
+        });
     }
+}
 
-    addEvent(document, 'click', function() { alert(this === document) });
-</script>
+addEvent(document, 'click', function() { alert(this === document) });
 ```
 
 当上面这几种情况同时出现的时候就比较有意思了，可以试试下面这段代码的你输出
 
 ```html
+<a href="javascript:alert(1)" onclick="alert(2)" id="link">click me</a>
+<script>
+    var link = document.getElementById('link');
+    link.onclick = function() { alert(3); }
+
+    $('#link').bind('click', function() { alert(4); });
+    $('#link').bind('click', function() { alert(5); });
+</script>
+```
+
+正确的结果应该是 `3,4,5,1`，根据结果我们可以得出以下结论：
+
+* 链接上的 href 伪 javascript 协议相当于在浏览器地址栏执行了一段 JavaScript 代码，链接如果是这种格式，点击的时候相当于执行了这段 JavaScript 脚本
+* 行内的事件绑定和元素调用 onclick 绑定事件会覆盖
+* 使用 jQuery（内部使用标准事件注册 API）可以绑定多个事件处理程序
+
+## 事件冒泡
+
+大部分事件会沿着事件触发的目标元素往上传播。比如：`body>div>p>span` 如果他们都注册了点击事件，那么在 span 元素上触发点击事件后 p,div,body 各自的点击事件也会按顺序触发
+
+事件冒泡是可以被停止的，下面这个函数封闭了停止事件冒泡的方法：
+
+```javascript
+function stopPropagation(event) {
+    event = event || window.event;
+    if (event.stopPropagation) {
+        event.stopPropagation()
+    } else {// IE
+        event.cancelBubble = true
+    }
+}
+
+addEvent('ele', 'click', function(e) {
+    // click handler
+    stopPropagation(e);
+});
 ```
 
 ## 事件对象
 
 标准浏览器中在事件处理程序被调用时 **事件对象** 会通过参数传递给处理程序，IE 8 及以下浏览器中事件对象可以通过全局的 `window.event` 来访问。比如我们要获取当前点击的 DOM Element
 
-```html
-<script>
-    addEvent(document, 'click', function(event) {
-        // IE 8 以下 => undefined
-        console.log(event);
-    });
-    addEvent(document, 'click', function(event) {
-        event = event || window.event;
-        // 标准浏览器 => [object HTMLHtmlElement]
-        // IE 8 以下 => undefined
-        console.log(event.target);
-        var target = event.target || event.srcElement;
+```javascript
+addEvent(document, 'click', function(event) {
+    // IE 8 以下 => undefined
+    console.log(event);
+});
+addEvent(document, 'click', function(event) {
+    event = event || window.event;
+    // 标准浏览器 => [object HTMLHtmlElement]
+    // IE 8 以下 => undefined
+    console.log(event.target);
+    var target = event.target || event.srcElement;
 
-        console.log(target.tagName);
-    });
-</script>
+    console.log(target.tagName);
+});
 ```
 
 ## 事件代理
@@ -232,15 +261,13 @@ delegateEvent(el, 'click', function(target) {
 
 这些 API 主要是为了方便绑定事件的各种场景，并且内部处理好了兼容性问题。还有一个比较好用的地方就是 `事件命名空间`。比如：两个弹出层都向 document 绑定了点击关闭事件，但是如果只想解绑其中一个。这时候使用命名空间再合适不过了。可以试试这个小例子 [Event Binding](http://jsbin.com/sacinereju/edit?html,output)
 
-```html
-<script>
-    $(document).bind('click.handler1', function() { console.log(1);})
-    $(document).bind('click.handler2', function() { console.log(2);})
+```javascript
+$(document).bind('click.handler1', function() { console.log(1);})
+$(document).bind('click.handler2', function() { console.log(2);})
 
-    $(document).unbind('click.handler2');   // 解除指定的
-    $(document).unbind('click');            // 解除所有点击事件
-    $(document).unbind()                    // 解除所有事件
-</script>
+$(document).unbind('click.handler2');   // 解除指定的
+$(document).unbind('click');            // 解除所有点击事件
+$(document).unbind()                    // 解除所有事件
 ```
 
 ## 自定义事件与发布/订阅者设计模式
