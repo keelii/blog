@@ -5,7 +5,6 @@ languageCode = "zh-CN"
 
 theme = "demo-theme"
 
-Paginate = 4
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
 

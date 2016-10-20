@@ -1,5 +1,14 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+#content {
+    // pre {
+    //     margin-bottom: 2.1em;
+    // }
+    // code {
+    //     font-size: 13px;
+    //     padding: .8em 1em;
+    // }
+}
 
 .hide {
   display: none;
@@ -106,4 +115,13 @@ table {
 }
 .share-weibo:hover {
   border-color:#ddd;
+}
+
+#TableOfContents {
+  >ul>li {
+    padding-left: 0;
+    >ul>li {
+      padding-left: 0;
+    }
+  }
 }

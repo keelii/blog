@@ -29,16 +29,6 @@
     {{- end }}
     {{ end }}
 
-    {{- range .Site.Params.scripts }}
-    <script src="{{ . | absURL }}"></script>
-    {{- end }}
-
-    {{ if .IsPage }}
-    {{- range .Site.Params.pageScripts }}
-    <script src="{{ . }}"></script>
-    {{- end }}
-    {{ end }}
-
     <!-- <meta property="wb:webmaster" content="9e54d7323cc6a75d" /> -->
     {{ partial "google_analytics.html" . }}
 </head>

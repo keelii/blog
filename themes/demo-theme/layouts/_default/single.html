@@ -17,9 +17,7 @@
                 <div class="entry-content">{{ .Content }}</div>
                 <footer>
                     <p class="meta">
-                        <span class="byline author vcard">
-                            Posted by <span class="fn">{{ or .Params.author .Site.Params.author }}</span>
-                        </span>
+                        <span class="byline author vcard">Posted</span>
                         {{ if (.Params.categories) }}
                         <span class="span">on</span>
                         <span class="categories">
@@ -29,10 +27,10 @@
                             {{ end }}
                         </span>
                         {{ end }}
-                        <span class="span">Last Modified</span>
+                        <span class="span">Last modified</span>
                         <time class="entry-date" datetime="{{ .Lastmod.Format "2006-01-02 15:04:05" }}">
-                            <span class="time">{{ .Lastmod.Format "PM 15:04" }}</span>
                             <span class="date">{{ .Lastmod.Format "Jan,2 2006" }}</span>
+                            <span class="time">{{ .Lastmod.Format "15:04" }}</span>
                         </time>
                     </p>
                     <p class="meta">
@@ -58,5 +56,3 @@
 </div>
 
 {{ partial "footer.html" . }}
-
-<script>if (typeof hljs) hljs.initHighlightingOnLoad();</script>
