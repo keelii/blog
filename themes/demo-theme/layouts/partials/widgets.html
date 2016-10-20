@@ -2,7 +2,7 @@
 <section class="odd">
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
-        {{ range first .Site.Params.sidebar.recentCount (where .Data.Pages "Type" "archives") }}
+        {{ range first .Site.Params.sidebar.recentCount (where .Site.AllPages "Section" "archives") }}
         <li class="post">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
@@ -17,7 +17,7 @@
     <ul id="category-list">
         {{ range $name, $items := .Site.Taxonomies.categories }}
         <li>
-            <li><a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a> </li>
+            <a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a>
         </li>
         {{ end }}
     </ul>

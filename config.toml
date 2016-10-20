@@ -39,7 +39,9 @@ DisqusShortname = "keelii-blog"
     searchUrl = "https://www.google.com/search"
 
     pageScripts = [
-        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js",
+        "/javascripts/octopress.js",
+        "/javascripts/post.js",
     ]
     pageStyles = [
         "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-dark.min.css"

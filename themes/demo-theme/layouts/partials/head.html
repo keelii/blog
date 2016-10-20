@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
-<html class="no-js" lang="{{ .Site.Params.htmlLang }}">
-<!--<![endif]-->
+<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="{{ .Site.Params.htmlLang }}"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>{{ .Title | title }}</title>
@@ -34,9 +30,8 @@
     {{ end }}
 
     {{- range .Site.Params.scripts }}
-    <script src="{{ . }}"></script>
+    <script src="{{ . | absURL }}"></script>
     {{- end }}
-    <script src="{{ "/javascripts/octopress.js" | absURL }}"></script>
 
     {{ if .IsPage }}
     {{- range .Site.Params.pageScripts }}

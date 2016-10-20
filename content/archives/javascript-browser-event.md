@@ -2,7 +2,7 @@
 date = "2016-09-29 17:22:29 +0800"
 title = "JavaScript 浏览器事件"
 isCJKLanguage = true
-categories = ["JavaScript Event"]
+categories = ["javascript", "Event"]
 tags = []
 +++
 
