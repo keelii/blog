@@ -1,9 +1,10 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://keelii.github.io/"
 title = "Something"
 isCJKLanguage = true
 languageCode = "zh-CN"
+RSSUri = "atom.xml"
 
-theme = "demo-theme"
+theme = "octo-enhance"
 
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
@@ -51,8 +52,11 @@ DisqusShortname = "keelii-blog"
         "/javascripts/octopress.js"
     ]
     styles = [
+        # 'http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic'
+        # 'http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic'
         "//fonts.lug.ustc.edu.cn/css?family=PT+Serif:regular,italic,bold,bolditalic",
-        "//fonts.lug.ustc.edu.cn/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        "//fonts.lug.ustc.edu.cn/css?family=PT+Sans:regular,italic,bold,bolditalic",
+        "/stylesheets/screen.css"
     ]
 
 [params.sidebar]

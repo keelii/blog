@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
-<html class="no-js" lang="{{ .Site.Params.htmlLang }}"><!--<![endif]-->
+<html class="no-js" lang="{{ .Site.LanguageCode }}"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>{{ .Title | title }}</title>
@@ -8,28 +8,24 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ .Hugo.Generator }}
 
-    <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ "/favicon.png" | absURL }}" rel="icon">
     <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-    <link href="{{ "/stylesheets/screen.css" | absURL }}" media="screen, projection" rel="stylesheet" type="text/css">
-    {{- range .Site.Params.styles }}
+    {{ range .Site.Params.styles }}
     <link href="{{ . }}" rel="stylesheet" type="text/css">
     {{- end }}
 
-    {{ if .IsPage }}
+    {{- if .IsPage }}
     {{- range .Site.Params.pageStyles }}
     <link href="{{ . }}" rel="stylesheet" type="text/css">
     {{- end }}
-    {{ end }}
+    {{- end }}
 
-    <!-- <meta property="wb:webmaster" content="9e54d7323cc6a75d" /> -->
     {{ partial "google_analytics.html" . }}
 </head>
 <body>
