@@ -1,6 +1,7 @@
 +++
-date = "2016-06-20 19:10:28 +0800"
 title = "《JavaScript 权威指南》读书笔记 4 - 表达式和运算符"
+isCJKLanguage = true
+date = "2016-06-20 19:10:28 +0800"
 categories = ["javascript","JavaScript_The_Definitive_Guide"]
 tags = []
 +++

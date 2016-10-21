@@ -1,6 +1,7 @@
 +++
-date = "2016-07-06 12:43:30 +0800"
 title = "《JavaScript 权威指南》读书笔记 10 - 正则表达式的模式匹配"
+isCJKLanguage = true
+date = "2016-07-06 12:43:30 +0800"
 categories = ["javascript","JavaScript_The_Definitive_Guide"]
 tags = []
 +++

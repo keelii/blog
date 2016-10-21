@@ -1,6 +1,7 @@
 +++
-date = "2016-08-12 15:36:59 +0800"
 title = "《JavaScript 权威指南》读书笔记 15 - 脚本化文档"
+isCJKLanguage = true
+date = "2016-08-12 15:36:59 +0800"
 categories = ["javascript","JavaScript_The_Definitive_Guide"]
 tags = []
 +++

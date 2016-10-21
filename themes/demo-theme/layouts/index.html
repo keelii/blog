@@ -20,7 +20,7 @@
                 <div class="entry-content"><p>{{ .Summary }}</p></div>
                 {{ if .Truncated }}
                 <footer>
-                    <a title="{{ .WordCount }} Words, Maybe {{ .ReadingTime }} Minutes" href="{{ .RelPermalink }}" rel="full-article">Read More »</a>
+                    <a title="{{ .WordCount }} Words, {{ .ReadingTime }} Minutes" href="{{ .RelPermalink }}" rel="full-article">Read More »</a>
                 </footer>
                 {{ end }}
             </article>

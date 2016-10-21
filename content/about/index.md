@@ -1,8 +1,7 @@
 +++
-date = "2016-06-13 18:04:47 +0800"
 title = "about"
+date = "2016-06-13 18:04:47 +0800"
 type = "pages"
-url = "about"
 +++
 
 ### Contact

@@ -1,6 +1,7 @@
 +++
-date = "2016-06-11 6:52:57 +0800"
 title = "JavaScript 节流函数 throttle 详解"
+isCJKLanguage = true
+date = "2016-06-11 6:52:57 +0800"
 categories = ["javascript"]
 tags = ["javascript","throttle"]
 +++

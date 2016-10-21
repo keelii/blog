@@ -1,6 +1,7 @@
 +++
-date = "2016-07-04 09:32:45 +0800"
 title = "使用 lisp 简单描述加法运算"
+isCJKLanguage = true
+date = "2016-07-04 09:32:45 +0800"
 categories = ["lisp"]
 tags = []
 +++

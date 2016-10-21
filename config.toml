@@ -39,7 +39,6 @@ DisqusShortname = "keelii-blog"
 
     pageScripts = [
         "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js",
-        "/javascripts/octopress.js",
         "/javascripts/post.js",
     ]
     pageStyles = [
@@ -48,7 +47,8 @@ DisqusShortname = "keelii-blog"
 
     scripts = [
         "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",
-        "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
+        "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js",
+        "/javascripts/octopress.js"
     ]
     styles = [
         "//fonts.lug.ustc.edu.cn/css?family=PT+Serif:regular,italic,bold,bolditalic",

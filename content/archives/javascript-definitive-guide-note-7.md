@@ -1,6 +1,7 @@
 +++
-date = "2016-06-29 20:22:22 +0800"
 title = "《JavaScript 权威指南》读书笔记 8 - 函数"
+isCJKLanguage = true
+date = "2016-06-29 20:22:22 +0800"
 categories = ["javascript","JavaScript_The_Definitive_Guide"]
 tags = []
 +++

@@ -1,6 +1,7 @@
 +++
-date = "2016-06-10 18:04:47 +0800"
 title = "测试文章"
+isCJKLanguage = true
+date = "2016-06-10 18:04:47 +0800"
 categories = []
 tags = []
 +++

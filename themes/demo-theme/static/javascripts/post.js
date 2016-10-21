@@ -18,54 +18,44 @@
     function fixTOC() {
         var handler = detectFix();
 
+        handler();
+
         $(window).bind('scroll.checkToc resize.checkToc', handler);
         $(document).delegate('.toggle-sidebar', 'click', handler);
     }
 
-    function addHotKeys() {
-        $(document).bind('keyup.hotkey', function(event) {
-            var sTop = $('body').scrollTop();
+    function initTOCFold() {
+        var $toc = $('#side-toc');
+        var $items = $toc.find('nav>ul>li>ul li')
+        var FOLD_ARR = ['▼', '▲'];
 
-            switch (event.which) {
-                // [s]
-                case 83:
-                    $('.search').focus();
-                    break;
-                // [t]
-                case 84:
-                    $('body').animate({ scrollTop: 0 }, 300);
-                    break;
-                // vim like key
-                // [h]
-                case 72:
-                    var $left = $('.basic-alignment.left');
-                    if ($left.length) {
-                        location.href = $left.attr('href');
-                    }
-                    break;
-                // [l]
-                case 76:
-                    var $right = $('.basic-alignment.right');
-                    if ($right.length) {
-                        location.href = $right.attr('href');
-                    }
-                    break;
-                // [j]
-                case 74:
-                    $('body').animate({ scrollTop: sTop + 300 }, 100);
-                    break;
-                // [k]
-                case 75:
-                    $('body').animate({ scrollTop: sTop - 300 }, 100);
-                    break;
-                default:
+        $items.each(function() {
+            if ($(this).find('ul').length) {
+                $(this).append('<span data-open="1" class="fold-toc">'+ FOLD_ARR[0] +'</span>')
             }
         });
+
+        function handleFold() {
+            var $ul = $(this).parent().children('ul');
+            var isOpen = $(this).data('open');
+
+            if (isOpen) {
+                $(this).text(FOLD_ARR[1]);
+                $ul.hide();
+                $(this).data('open', 0);
+            } else {
+                $(this).text(FOLD_ARR[0]);
+                $ul.show();
+                $(this).data('open', 1);
+            }
+        }
+
+        $toc.delegate('.fold-toc', 'click', handleFold);
     }
 
     function init() {
-        addHotKeys();
         fixTOC();
+        initTOCFold();
     }
 
     $(init);
