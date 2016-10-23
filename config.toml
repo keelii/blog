@@ -35,7 +35,6 @@ DisqusShortname = "keelii-blog"
 [params]
     author = "keelii"
     description  = "There's always __ you do not know yet"
-    htmlLang = "zh-CN"
     searchUrl = "https://www.google.com/search"
 
     pageScripts = [
