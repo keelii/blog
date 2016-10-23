@@ -1,8 +1,8 @@
 +++
 title = "京东单品页前端开发那些不得不说的事儿"
 isCJKLanguage = true
-date = "2016-07-31 10:48:57 +0800"
 url = "/2016/07/31/something-have-to-say-with-JD-item/"
+date = "2016-07-31 10:48:57 +0800"
 categories = ["JD", "item"]
 +++
 
