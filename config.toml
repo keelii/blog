@@ -3,7 +3,7 @@ title = "Something"
 isCJKLanguage = true
 languageCode = "zh-CN"
 RSSUri = "atom.xml"
-paginatePath = "post"
+paginatePath = "posts"
 theme = "octo-enhance"
 
 GoogleAnalytics = "UA-79264835-1"
