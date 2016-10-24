@@ -38,16 +38,16 @@ DisqusShortname = "keelii-blog"
     searchUrl = "https://www.google.com/search"
 
     pageScripts = [
-        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js",
+        "//cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js",
         "/javascripts/post.js",
     ]
     pageStyles = [
-        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-dark.min.css"
+        "//cdn.bootcss.com/highlight.js/9.7.0/styles/solarized-dark.min.css"
     ]
 
     scripts = [
         "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",
-        "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js",
+        "//cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js",
         "/javascripts/octopress.js"
     ]
     styles = [
