@@ -7,7 +7,7 @@
 </footer>
 
 {{ range .Site.Params.scripts }}
-<script src="{{ . | absURL }}"></script>
+<script src="{{ . }}"></script>
 {{- end }}
 
 {{ if .IsPage }}
