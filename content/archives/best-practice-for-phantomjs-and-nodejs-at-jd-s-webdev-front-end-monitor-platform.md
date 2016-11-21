@@ -6,7 +6,7 @@ tags = ["NodeJS","PhantomJS", "monitor"]
 date = "2016-11-17T09:55:41+08:00"
 +++
 
-> 本文首发于 [infoQ](http://www.infoq.com/cn/articles/practise-of-phantomjs-and-nodejs-in-jingdong)，感谢 infoQ 前端之巅尾尾同学对文章的整理和校对、微信群直播的组织策划。「前端之巅」是个非常棒的前端知识分享平台，想了解最前沿的前端知识资讯果断关注吧
+> 本文首发于 [infoQ](http://www.infoq.com/cn/articles/practise-of-phantomjs-and-nodejs-in-jingdong) 及「前端之巅」微信公众号（[微信群直播记录](https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247484138&idx=1&sn=431702ee926dd3a92403bb58417d88d4&scene=2&srcid=0831H070dVHqyZ5Gg62tZRsl&from=timeline&isappinstalled=0&pass_ticket=UAxLVHRLr%2B46hzwgDjfAanLKPSIcnzOQLPJZtqRkoQeHy03khyC2aD7Lat9WgyiL)），感谢 infoQ 前端之巅尾尾同学对文章的整理和校对、微信群直播的组织策划。「前端之巅」是个非常棒的前端知识分享平台，想了解最前沿的前端知识资讯果断关注吧
 <!--more-->
 ## 为什么需要一个前端监控系统
 
