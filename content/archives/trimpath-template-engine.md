@@ -3,7 +3,7 @@ title = "TrimPath 模板引擎使用指南"
 isCJKLanguage = true
 date = "2016-11-21T12:39:49+08:00"
 categories = ['javascript', 'template_engine']
-tags = ['javascript', 'modifier', 'macro']
+tags = ['modifier', 'macro', 'template']
 +++
 
 [TrimPath](http://www.summitdowntown.org/site_media/media/javascript/private/trimpath-template-docs/JavaScriptTemplates.html) 是一款轻量级的前端 JavaScript 模板引擎，语法类似 [FreeMarker](http://freemarker.org/), [Velocity](https://velocity.apache.org/)，主要用于方便地渲染 json 数据

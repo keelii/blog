@@ -1,7 +1,7 @@
 +++
 title = "PhantomJS & NodeJS 在京东网站前端监控平台的最佳实践"
 isCJKLanguage = true
-categories = ["JD"]
+categories = ["jd", "javascript"]
 tags = ["NodeJS","PhantomJS", "monitor"]
 date = "2016-11-17T09:55:41+08:00"
 +++

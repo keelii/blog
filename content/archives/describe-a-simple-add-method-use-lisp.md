@@ -3,7 +3,6 @@ title = "使用 lisp 简单描述加法运算"
 isCJKLanguage = true
 date = "2016-07-04 09:32:45 +0800"
 categories = ["lisp"]
-tags = []
 +++
 
 最近在看 [MIT 公开课-计算机程序的构造和解释](http://v.youku.com/v_show/id_XNTEzMDAyMTU2.html?f=18958522)，即使你像我一样根本没学过 lisp 也能看懂下面这段代码，这段代码展示了怎么实现加法运算，这种我们几乎从来不会去想为什么的问题，这几行简单的代码告诉我们如何计算出 3 + 4 的值

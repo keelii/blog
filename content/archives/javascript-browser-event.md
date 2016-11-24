@@ -3,7 +3,6 @@ title = "JavaScript 浏览器事件"
 isCJKLanguage = true
 date = "2016-09-29 17:22:29 +0800"
 categories = ["javascript", "Event"]
-tags = []
 +++
 
 ## JavaScript、浏览器、事件之间的关系

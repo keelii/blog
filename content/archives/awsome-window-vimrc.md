@@ -2,7 +2,7 @@
 title = "可能是 Windows 下最漂亮的 Gvim 配置了"
 isCJKLanguage = true
 date = "2016-06-13 21:25:57 +0800"
-categories = ["editor"]
+categories = ["editor", "VIM"]
 tags = ["vim","gVim"]
 +++
 

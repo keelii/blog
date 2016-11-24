@@ -2,7 +2,7 @@
 title = "Windows 下使用 MinGW 编译安装 (g)vim 添加 lua 等编程语言支持"
 isCJKLanguage = true
 date = "2016-06-14 10:39:40 +0800"
-categories = ["editor"]
+categories = ["editor", "VIM"]
 tags = ["vim","editor","MinGW"]
 +++
 
