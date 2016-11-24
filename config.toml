@@ -6,6 +6,8 @@ RSSUri = "atom.xml"
 paginatePath = "posts"
 theme = "octo-enhance"
 
+disablePathToLower = true
+
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
 

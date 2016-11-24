@@ -6,7 +6,7 @@ categories = ['javascript', 'template_engine']
 tags = ['javascript', 'modifier', 'macro']
 +++
 
-[TrimPath](http://www.summitdowntown.org/site_media/media/javascript/private/trimpath-template-docs/JavaScriptTemplates.html) 是一款轻量级的前端 JavaScript 模板引擎，语法类似 [FreeMarker](http://freemarker.org/), [Velocity](https://velocity.apache.org/)，主要服务业方便地渲染 json 数据
+[TrimPath](http://www.summitdowntown.org/site_media/media/javascript/private/trimpath-template-docs/JavaScriptTemplates.html) 是一款轻量级的前端 JavaScript 模板引擎，语法类似 [FreeMarker](http://freemarker.org/), [Velocity](https://velocity.apache.org/)，主要用于方便地渲染 json 数据
 <!--more-->
 ## 语法 Syntax
 
@@ -122,7 +122,9 @@ var out = '{var nu = 12}${nu|toFixed:2}'.process({ _MODIFIERS: Modifiers });
 
 ## 宏 Macro
 
-macro 一般用来封装可复用 HTML 模板，类似函数的功能。对于每个模板来说 macro 是私用的。如果想公用 macro，可以保存 macro 引用到 contextObject 上。比如：在调用 process() 方法之前设置 `contextObject['exported'] = {}`
+macro 一般用来封装可复用 HTML 模板，类似函数的功能。对于每个模板来说 macro 是私用的。如果想公用 macro，可以保存 macro 引用到 contextObject 上（下次调用 process() 方法的时候再手动挂载上!? ）。需要在调用 process() 方法之前给 contextObject 设置一个空的 exported 属性：`contextObject['exported'] = {}`
+
+这个公用的 macro 设计的有点奇葩，可以参考这个 [示例](http://codepen.io/keelii/pen/dOvgOJ)
 
 ```
 {macro link(href, name)}
