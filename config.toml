@@ -40,7 +40,7 @@ DisqusShortname = "keelii-blog"
     searchUrl = "https://www.google.com/search"
 
     pageScripts = [
-        "//cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js",
+        "/javascripts/highlight.pack.js",
         "/javascripts/post.js",
     ]
     pageStyles = [

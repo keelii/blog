@@ -2,6 +2,7 @@
 title = "可能是 Windows 下最漂亮的 Gvim 配置了"
 isCJKLanguage = true
 date = "2016-06-13 21:25:57 +0800"
+lastmod = "2016-11-25 13:25:57 +0800"
 categories = ["editor", "VIM"]
 tags = ["vim","gVim"]
 +++
@@ -16,7 +17,7 @@ tags = ["vim","gVim"]
 
 * ThinkPad T450 (公司标配)
 * Windows 7 SP1 64bit 企业版
-* 编程语言 Javascript, HTML, CSS, NodeJS, Python
+* 编程语言 JavasSript, HTML, CSS, NodeJS, Python
 
 ## 前言
 
@@ -43,7 +44,6 @@ tags = ["vim","gVim"]
 
 ### Startup
 
-{% raw %}
 ```vim
 " Startup {{{
 filetype indent plugin on
@@ -57,7 +57,6 @@ augroup ft_vim
 augroup END
 " }}}
 ```
-{% endraw %}
 
 设置 vim 相关文件打开后默认折叠方式为 marker，约定俗成的用三个花括号注释包裹起来，这样在你打开配置文件的时候 vim 就会帮你折叠起来，配置文件看起来就简洁多了，如图:
 
@@ -65,7 +64,6 @@ augroup END
 
 ### General
 
-{% raw %}
 ```vim
 " General {{{
 set nocompatible
@@ -82,7 +80,6 @@ set clipboard+=unnamed
 set winaltkeys=no
 " }}}
 ```
-{% endraw %}
 
 基本上一眼就能看出来这是些啥玩意，不过后面两项目我个人感觉比较好用：
 
@@ -92,7 +89,6 @@ winaltkeys=no 一般 windows 下应用程序的 alt 是用来定位菜单栏目�
 
 ### Lang & Encoding
 
-{% raw %}
 ```vim
 " Lang & Encoding {{{
 set fileencodings=utf-8,gbk2312,gbk,gb18030,cp936
@@ -102,13 +98,11 @@ let $LANG = 'en_US.UTF-8'
 "language messages zh_CN.UTF-8
 " }}}
 ```
-{% endraw %}
 
 vim 里面设置编码的地方很多，上面这些配置可以保证不会出现乱码，像文件菜单、vim默认语言建议设置成 en_US
 
 ### GUI
 
-{% raw %}
 ```vim
 " GUI {{{
 colorscheme Tomorrow-Night
@@ -136,7 +130,6 @@ set nolist
 set guifont=Inconsolata:h12:cANSI
 " }}}
 ```
-{% endraw %}
 
 编辑器配色建议使用 Tomorrow-Night，下载文件 copy 到 colors 目录即可
 
@@ -152,7 +145,6 @@ set guifont=Inconsolata:h12:cANSI
 
 ### Format
 
-{% raw %}
 ```vim
 " Format {{{
 set autoindent
@@ -164,7 +156,6 @@ set foldmethod=indent
 syntax on
 " }}}
 ```
-{% endraw %}
 
 这个设置容易引起争议，我自己是这么个设置，大家按个人喜好就行了，反正我是不建议使用 tab 的，对代码格式有强迫症的人一般都会设置 foldmethod=indent
 
@@ -172,7 +163,6 @@ syntax on
 
 可以说快捷键是每个编辑器必备的功能，科学的设置快捷键能很大程度的提高效率。快捷键的设置要遵循一个规则：尽量不要修改系统默认配置的快捷键，非要设置的话选择好相应的模式
 
-{% raw %}
 ```vim
 " Keymap {{{
 let mapleader=","
@@ -247,7 +237,6 @@ nnoremap <C-right> :bp<CR>
 
 " }}}
 ```
-{% endraw %}
 
 首页我们设置了 leaderkey 为逗号「,」，不要问为什么约定的就是它。别设置成空格就行了
 
@@ -336,7 +325,6 @@ Git 命令增强工具，在 vim 使用 git，状态栏的分类名称就是调�
 
 常用方法这里我只有一个，移除尾空格
 
-{% raw %}
 ```vim
 " Function {{{
 " Remove trailing whitespace when writing a buffer, but not for diff files.
@@ -354,7 +342,6 @@ endfunction
 autocmd BufWritePre * call RemoveTrailingWhitespace()
 " }}}
 ```
-{% endraw %}
 
 No picture U say a ... ?
 
