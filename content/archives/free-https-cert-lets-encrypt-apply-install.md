@@ -2,6 +2,7 @@
 title = "免费 https 证书（Let's Encrypt）申请与配置"
 isCJKLanguage = true
 date = "2016-06-12 18:04:47 +0800"
+lastMod = "2017-04-22 12:04:47 +0800"
 categories = ["WebDev"]
 tags = ["https", "encrypt"]
 +++
@@ -26,9 +27,11 @@ cd certbot
 ./certbot-auto certonly --webroot --agree-tos -v -t --email keeliizhou@gmail.com -w /path/to/your/web/root -d note.crazy4code.com
 ```
 
-__注意__ 这里 默认会自动生成 /__网站根目录__/.well-known/acme-challenge，然后 shell 脚本会对应的访问 __网站域名__/.well-known/acme-challenge
+__注意__ 这里 默认会自动生成到 /__网站根目录__/.well-known/acme-challenge 文件夹，然后 shell 脚本会对应的访问 __网站域名__/.well-known/acme-challenge 是否存在来确定你对网站的所属权
 
-如果返回正常就确认了你对这个网站的所有权，就能顺利生成
+比如：我的域名是 **note.crazy4code.com** 那我就得保证域名下面的 **.well-known/acme-challenge/** 目录是可访问的
+
+如果返回正常就确认了你对这个网站的所有权，就能顺利生成，完成后这个目录会被清空
 
 ## 3. 获取证书
 

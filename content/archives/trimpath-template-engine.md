@@ -1,7 +1,8 @@
 +++
 title = "TrimPath 模板引擎使用指南"
 isCJKLanguage = true
-date = "2016-11-21T12:39:49+08:00"
+date = "2016-11-21 12:39:49 +0800"
+lastmod = "2017-05-02 15:16:49 +0800"
 categories = ['javascript', 'template_engine']
 tags = ['modifier', 'macro', 'template']
 +++
@@ -96,7 +97,7 @@ CDATA 部分用来告诉模板引擎不用做任何解析渲染，直接输出�
 
 ## 修饰符 Modifier
 
-修饰符用来处理上一个表达式的结果，并输出内容。类似于 Linux shell 中的 pipe 命名，可以串联
+修饰符用来处理上一个表达式的结果，并输出内容。类似于 Linux shell 中的管道操作符，使用「|」分割不同修饰符，可以串联使用
 
 ```
 ${name|capitalize}
@@ -113,11 +114,19 @@ ${name|default:"noname"|capitalize}
 
 ### 自定义修饰符
 
-算定义修饰符可以持载到 contextObject 上的 `_MODIFIERS` 属性上
+自定义修饰符可以挂载到 contextObject 上的 `_MODIFIERS` 属性上
 
 ```
-var Modifiers = { toFixed: function(n, num) { return n.toFixed(num) } }
-var out = '{var nu = 12}${nu|toFixed:2}'.process({ _MODIFIERS: Modifiers });
+var Modifiers = {
+  toFixed: function(value, num) {
+    return value.toFixed(num)
+  }
+}
+var out = '${num|toFixed:2}'.process({
+  _MODIFIERS: Modifiers,
+  num: 1024
+})
+// => "1024.00"
 ```
 
 ## 宏 Macro

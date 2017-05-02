@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="canonical" href="{{ .Permalink }}">
-    <link href="{{ "/favicon.png" | absURL }}" rel="icon">
+    <link href="{{ "/favicon.ico" | absURL }}" rel="icon">
     <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 
     {{ range .Site.Params.styles }}
@@ -26,7 +26,7 @@
     {{- end }}
     {{- end }}
 
-    <meta name="360-site-verification" content="97274d5ff16511caf615a565d3257ce8" />
+    <meta name="360-site-verification" content="97274d5ff16511caf615a565d3257ce8">
     {{ partial "google_analytics.html" . }}
 </head>
 <body>
