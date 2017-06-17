@@ -7,6 +7,7 @@ paginatePath = "posts"
 theme = "octo-enhance"
 EnableGitInfo = true
 disablePathToLower = true
+preserveTaxonomyNames = true
 
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
@@ -36,23 +37,28 @@ DisqusShortname = "keelii-blog"
 
 [params]
     author = "keelii"
-    description  = "__ you do not know yet"
+    description  = "__ you don't know yet"
     searchUrl = "https://www.google.com/search"
 
+    # Use MathJax Lib when `math = true` is specified in font matter
+    mathJax = "//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     pageScripts = [
         "/javascripts/highlight.pack.js",
         "/javascripts/post.js",
-        "//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
     ]
     pageStyles = [
         "//cdn.bootcss.com/highlight.js/9.7.0/styles/solarized-dark.min.css"
     ]
 
     scripts = [
-        "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",
-        "//cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js",
+        "//cdn.bootcss.com/zepto/1.2.0/zepto.min.js",
         "/javascripts/octopress.js"
     ]
+    # scripts = [
+    #     "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",
+    #     "//cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js",
+    #     "/javascripts/octopress.js"
+    # ]
     styles = [
         "//fonts.crazy4code.com/css?family=PT+Serif:regular,italic,bold,bolditalic",
         "//fonts.crazy4code.com/css?family=PT+Sans:regular,italic,bold,bolditalic",

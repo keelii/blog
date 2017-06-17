@@ -4,6 +4,7 @@ title = "关系代数的基本运算"
 isCJKLanguage = true
 categories = ["math", "database"]
 tags = ["set","operation","RA"]
+math = true
 +++
 
 ## 关系代数运算符
