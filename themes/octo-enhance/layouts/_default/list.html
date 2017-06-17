@@ -26,7 +26,7 @@
                                 <div class="categories">
                                     posted in
                                     {{ range .Params.categories }}
-                                    <a class="category" href="{{ "/categories/"  }}{{ . }}">{{ . }}</a>
+                                    <a class="category" href="{{ "/categories/"  }}{{ . | urlize }}">{{ . }}</a>
                                     {{ end }}
                                 </div>
                             </footer>
