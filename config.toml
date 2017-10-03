@@ -2,7 +2,6 @@ baseurl = "https://keelii.github.io/"
 title = "Something"
 isCJKLanguage = true
 languageCode = "zh-CN"
-RSSUri = "atom.xml"
 paginatePath = "posts"
 theme = "octo-enhance"
 EnableGitInfo = true
@@ -11,6 +10,9 @@ preserveTaxonomyNames = true
 
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
+
+[outputFormats.RSS]
+baseName = "abc"
 
 [permalinks]
     archives = "/:year/:month/:day/:filename/"
@@ -28,7 +30,6 @@ DisqusShortname = "keelii-blog"
     Name = "Archives"
     URL = "/archives"
     weight = 2
-
 
 [[menu.main]]
     Name = "About"
