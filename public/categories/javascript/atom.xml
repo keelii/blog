@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Something</title>
+    <link>https://keelii.github.io/categories/javascript/</link>
+    <description>Recent content in Javascript on Something</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 03 May 2017 17:59:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://keelii.github.io/categories/javascript/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>jQuery data 方法的一个小特技</title>
+      <link>https://keelii.github.io/2017/05/03/a-trick-from-jquery-data-method/</link>
+      <pubDate>Wed, 03 May 2017 17:59:45 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2017/05/03/a-trick-from-jquery-data-method/</guid>
+      <description>通常我们在用 JavaScript 操作 DOM 元素的时候会往 DOM 上临时添加一些参数，用来记住一些状态，或者从后端取参数值等 一般通过在 HTML 标签上添加自定义属性来实现，但是这</description>
+    </item>
+    
+    <item>
+      <title>TrimPath 模板引擎使用指南</title>
+      <link>https://keelii.github.io/2016/11/21/trimpath-template-engine/</link>
+      <pubDate>Mon, 21 Nov 2016 12:39:49 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/11/21/trimpath-template-engine/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.summitdowntown.org/site_media/media/javascript/private/trimpath-template-docs/JavaScriptTemplates.html&#34;&gt;TrimPath&lt;/a&gt; 是一款轻量级的前端 JavaScript 模板引擎，语法类似 &lt;a href=&#34;http://freemarker.org/&#34;&gt;FreeMarker&lt;/a&gt;, &lt;a href=&#34;https://velocity.apache.org/&#34;&gt;Velocity&lt;/a&gt;，主要用于方便地渲染 json 数据
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PhantomJS &amp; NodeJS 在京东网站前端监控平台的最佳实践</title>
+      <link>https://keelii.github.io/2016/11/17/best-practice-for-phantomjs-and-nodejs-at-jd-s-webdev-front-end-monitor-platform/</link>
+      <pubDate>Thu, 17 Nov 2016 09:55:41 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/11/17/best-practice-for-phantomjs-and-nodejs-at-jd-s-webdev-front-end-monitor-platform/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本文首发于 &lt;a href=&#34;http://www.infoq.com/cn/articles/practise-of-phantomjs-and-nodejs-in-jingdong&#34;&gt;infoQ&lt;/a&gt; 及「前端之巅」微信公众号（&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;amp;mid=2247484138&amp;amp;idx=1&amp;amp;sn=431702ee926dd3a92403bb58417d88d4&amp;amp;scene=2&amp;amp;srcid=0831H070dVHqyZ5Gg62tZRsl&amp;amp;from=timeline&amp;amp;isappinstalled=0&amp;amp;pass_ticket=UAxLVHRLr%2B46hzwgDjfAanLKPSIcnzOQLPJZtqRkoQeHy03khyC2aD7Lat9WgyiL&#34;&gt;微信群直播记录&lt;/a&gt;），感谢 infoQ 前端之巅尾尾同学对文章的整理和校对、微信群直播的组织策划。「前端之巅」是个非常棒的前端知识分享平台，想了解最前沿的前端知识资讯果断关注吧
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 浏览器事件</title>
+      <link>https://keelii.github.io/2016/09/29/javascript-browser-event/</link>
+      <pubDate>Thu, 29 Sep 2016 17:22:29 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/09/29/javascript-browser-event/</guid>
+      <description>&lt;h2 id=&#34;javascript-浏览器-事件之间的关系&#34;&gt;JavaScript、浏览器、事件之间的关系&lt;/h2&gt;
+
+&lt;p&gt;JavaScript 程序采用了异步事件驱动编程（Event-driven programming）模型，维基百科对它的解释是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;事件驱动程序设计（英语：Event-driven programming）是一种电脑程序设计模型。这种模型的程序运行流程是由用户的动作（如鼠标的按键，键盘的按键动作）或者是由其他程序的消息来决定的。相对于批处理程序设计（batch programming）而言，程序运行的流程是由程序员来决定。批量的程序设计在初级程序设计教学课程上是一种方式。然而，事件驱动程序设计这种设计模型是在交互程序（Interactive program）的情况下孕育而生的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 15 - 脚本化文档</title>
+      <link>https://keelii.github.io/2016/08/12/javascript-definitive-guide-note-13/</link>
+      <pubDate>Fri, 12 Aug 2016 15:36:59 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/08/12/javascript-definitive-guide-note-13/</guid>
+      <description>&lt;p&gt;每个 Window 对象有一个 document 属性引用了 Document 对象。Document 对象表示窗口的内容，它是一个巨大的 API 中的核心对象，叫做文档对象模型（Document Obejct Model, DOM），用来展示和操作文档内容&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 14 - Window 对象</title>
+      <link>https://keelii.github.io/2016/07/26/javascript-definitive-guide-note-12/</link>
+      <pubDate>Tue, 26 Jul 2016 11:35:42 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/07/26/javascript-definitive-guide-note-12/</guid>
+      <description>&lt;p&gt;本章介绍 Window 对象的属性和方法&lt;/p&gt;
+
+&lt;h2 id=&#34;计时器&#34;&gt;计时器&lt;/h2&gt;
+
+&lt;p&gt;setTimeout() 和 setInterval() 可以用来注册指定时间之后调用的函数，不同的是 setInterval 会在指定毫秒数的间隔里重复调用。它们都返回一个值，这个值可以传递给 clearInterval/clearTimeout，用于取消后续函数的调用
+
+由于历史原因（通常不建议这么做），setTimeout 和 setInterval 的第一个参数可以作为字符串传入。如果是字符串，当到达指定时间时相当于执行 eval 字符串内容&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 13 - Web 浏览器中的 JavaScript</title>
+      <link>https://keelii.github.io/2016/07/14/javascript-definitive-guide-note-11/</link>
+      <pubDate>Thu, 14 Jul 2016 14:11:08 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/07/14/javascript-definitive-guide-note-11/</guid>
+      <description>&lt;h2 id=&#34;客户端的-javascript&#34;&gt;客户端的 JavaScript&lt;/h2&gt;
+
+&lt;p&gt;Window 对象是所有客户端 JavaScript 特性和 API 的主要接入点。它表示 Web 浏览器的一个窗口或者窗体，并且可以用标识符 window 来引用它。Window 对象定义了一些属性，比如:
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 11 - 服务器端的 JavaScript</title>
+      <link>https://keelii.github.io/2016/07/10/javascript-definitive-guide-note-10/</link>
+      <pubDate>Sun, 10 Jul 2016 19:47:18 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/07/10/javascript-definitive-guide-note-10/</guid>
+      <description>&lt;h2 id=&#34;用-node-实现异步-i-o&#34;&gt;用 Node 实现异步 I/O&lt;/h2&gt;
+
+&lt;p&gt;Node 是基于 C++ 的调整 JavaScript 解释器，绑定了用于进程、文件和网络套接字等底层 Unix API，还绑定了 HTTP 客户端和服务器 API。除了一些专门命名的同步方法外，Node 的绑定是异步的，且 Node 程序默认绝不阻塞，这意味着它们通过具备强大的可伸缩能力并能有效地处理高负荷。由于 API 是异步的，因此 Node 依赖事件处理程序，其通常使用嵌套函数和闭包来实现&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 10 - 正则表达式的模式匹配</title>
+      <link>https://keelii.github.io/2016/07/06/javascript-definitive-guide-note-9/</link>
+      <pubDate>Wed, 06 Jul 2016 12:43:30 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/07/06/javascript-definitive-guide-note-9/</guid>
+      <description>&lt;p&gt;正则表达式（regular expression）是一个描述字符模式的对象。在 JavaScript 中 String 和 RegExp 都定义了相关方法对文本进行模式匹配、检索和替换&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 9 - 类和模块</title>
+      <link>https://keelii.github.io/2016/07/02/javascript-definitive-guide-note-8/</link>
+      <pubDate>Sat, 02 Jul 2016 13:58:30 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/07/02/javascript-definitive-guide-note-8/</guid>
+      <description>&lt;p&gt;每个 JavaScript 对象都是一个属性集合，相互之间没有任何联系。在 JavaScript 中也可以定义对象的类，让每个对象都共享某些属性，这种「共享」的特性是非常有用的。类的成员或实例都包含一些属性，用以存放或者定义它们的状态，其中有些属性定义了它们的行为（通常称为方法）。这些行为通常是由类定义的，而且为所有实例所共享。例如，假设有一个 Complex 的类用来表示复数， 同时还定义了一些复数运算，一个 Complex 实例应当包含实数的实部和虚部（状态），同样 Complex 类还会定义复数的加法和乘法操作（行为）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 8 - 函数</title>
+      <link>https://keelii.github.io/2016/06/29/javascript-definitive-guide-note-7/</link>
+      <pubDate>Wed, 29 Jun 2016 20:22:22 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/29/javascript-definitive-guide-note-7/</guid>
+      <description>&lt;p&gt;函数是一段 JavaScript 代码，定义一次，可以被执行多次。JavaScript 函数是参数化的：函数定义会包括一个形参（parameter）的标识符列表，这些参数在函数体中像 &lt;strong&gt;局部变量&lt;/strong&gt; 一样工作，函数被调用的时候会为形参提供实参（argument）的值。使用实参的值计算返回值，成为该函数的 &lt;strong&gt;&lt;a href=&#34;https://keelii.github.io/2016/06/20/javascript-definitive-guide-note-3/#TOC-4&#34;&gt;调用表达式&lt;/a&gt;&lt;/strong&gt;值，调用上下文（invocation context）可以用 this 引用，嵌套函数可以构成闭包（closure）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 5 - 语句</title>
+      <link>https://keelii.github.io/2016/06/23/javascript-definitive-guide-note-4/</link>
+      <pubDate>Thu, 23 Jun 2016 19:10:28 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/23/javascript-definitive-guide-note-4/</guid>
+      <description>&lt;p&gt;表达式在 JavaScript 中是短语（phrases），那么语句（statements）就是 JavaScript 整句或命令，语句以分号结束。表达式计算出一个值，语句用来执行以使某件事情发生&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 6 - 对象</title>
+      <link>https://keelii.github.io/2016/06/23/javascript-definitive-guide-note-5/</link>
+      <pubDate>Thu, 23 Jun 2016 19:10:28 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/23/javascript-definitive-guide-note-5/</guid>
+      <description>&lt;p&gt;对象是 JavaScript 的基本数据类型。是一种复合值：将很多值聚合在一起。对象可以看做是无序集合，每个属性都是一个名/值对。这种基本数据结构还有很多叫法，比如「散列」（hash）、「散列表」（hashtable）、「字典」（dictionary）、「关联数组」（associative array）。JavaScript 还可以从一个称为 &lt;strong&gt;原型&lt;/strong&gt; 的对象继承属性&lt;/p&gt;
+
+&lt;p&gt;JavaScript 对象是动态的 —— 可以新增属性也可以删除属性，除了字符串、数字、布尔值、null 和 undefined 之外，JavaScript 中的值都是对象&lt;/p&gt;
+
+&lt;p&gt;对象是可变的，通过引用操作对象原对象也会受到影响
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 7 - 数组</title>
+      <link>https://keelii.github.io/2016/06/23/javascript-definitive-guide-note-6/</link>
+      <pubDate>Thu, 23 Jun 2016 19:10:28 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/23/javascript-definitive-guide-note-6/</guid>
+      <description>&lt;p&gt;数组是值的 &lt;strong&gt;有序集合&lt;/strong&gt;。每个值（任意 JavaScript 数据类型）叫做一个元素，元素在数组中的位置叫索引。JavaScript 数组是无/弱类型的（untyped），数组元素可以是任意类型&lt;/p&gt;
+
+&lt;p&gt;JavaScript 数组是 &lt;strong&gt;动态的&lt;/strong&gt;，根据需要它们会增长或缩减，创建的时候不须要声明一个固定的大小&lt;/p&gt;
+
+&lt;p&gt;JavaScript 数组可能是 &lt;strong&gt;稀疏的&lt;/strong&gt;，数组元素索引不一定要连续&lt;/p&gt;
+
+&lt;p&gt;JavaScript 数组是 JavaScript 对象的特殊形式。数组的实现是经过优化的，用数字索引来访问数组元素一般来说比访问常规的对象属性要 &lt;strong&gt;快很多&lt;/strong&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 4 - 表达式和运算符</title>
+      <link>https://keelii.github.io/2016/06/20/javascript-definitive-guide-note-3/</link>
+      <pubDate>Mon, 20 Jun 2016 19:10:28 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/20/javascript-definitive-guide-note-3/</guid>
+      <description>&lt;p&gt;表达式（expression）是 JavaScript 中的一个短语（phrases），JavaScript 解释器会将其计算（evaluate）出一个结果。程序中的常量、变量名、数组访问等都是表达式&lt;/p&gt;
+
+&lt;p&gt;简单表达式组合成复杂表达式最常用的方法就是使用运算符（operator）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 1 - 简介</title>
+      <link>https://keelii.github.io/2016/06/16/javascript-definitive-guide-note-0/</link>
+      <pubDate>Thu, 16 Jun 2016 13:06:13 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/16/javascript-definitive-guide-note-0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;第一章 主要介绍 JavaScript 的大概情况、基本语法。之前没有 JavaScript 基础的看不懂也没关系，后续章节会有进一步的详细说明，我会通读一遍 《&lt;a href=&#34;https://book.douban.com/subject/10549733/&#34;&gt;JavaScript 权威指南&lt;/a&gt;》，然后根据个人的理解整理出来我认为重要的核心概念，同时我也会参考原版英文版 &lt;a href=&#34;http://shop.oreilly.com/product/9780596805531.do&#34;&gt;JavaScript The Definitive Guide&lt;/a&gt;，取一些关键性、重要的单词做补充，以及对原版和译版做的一些勘误&lt;/p&gt;
+
+&lt;p&gt;中文排版指南遵守 &lt;a href=&#34;https://github.com/mzlogin/chinese-copywriting-guidelines&#34;&gt;中文文案排版指北&lt;/a&gt;，欢迎批评批正&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 2 - 词法结构</title>
+      <link>https://keelii.github.io/2016/06/16/javascript-definitive-guide-note-1/</link>
+      <pubDate>Thu, 16 Jun 2016 13:06:13 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/16/javascript-definitive-guide-note-1/</guid>
+      <description>&lt;p&gt;词法结构（Lexical Structure）是程序语言的一套基础性规则，用来描述如何使用这门语言来编写程序&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《JavaScript 权威指南》读书笔记 3 - 类型、值和变量</title>
+      <link>https://keelii.github.io/2016/06/16/javascript-definitive-guide-note-2/</link>
+      <pubDate>Thu, 16 Jun 2016 13:06:13 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/16/javascript-definitive-guide-note-2/</guid>
+      <description>&lt;p&gt;JavaScript 中的数据类型分为两类：原始类型（primitive type）和对象类型（object type）。原始类型包括数字、字符串和布尔值&lt;/p&gt;
+
+&lt;p&gt;JavaScript 中有两个特殊的原始值：null（空）和 undefined（未定义），它们不是数字、字符串或布尔值。它们通常代表了各自特殊类型的唯一的成员&lt;/p&gt;
+
+&lt;p&gt;除此之外的就是对象了。对象是属性（property）的集合，每个属性都由「名/值对」（值可以是原始值或者对象）构成。JavaScript 对象很多时候也是 JSON/map/hash/dict，只是在不同语言中叫法不一样
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 节流函数 throttle 详解</title>
+      <link>https://keelii.github.io/2016/06/11/javascript-throttle/</link>
+      <pubDate>Sat, 11 Jun 2016 06:52:57 +0800</pubDate>
+      
+      <guid>https://keelii.github.io/2016/06/11/javascript-throttle/</guid>
+      <description>&lt;p&gt;在浏览器 DOM 事件里面，有一些事件会随着用户的操作不间断触发。比如：重新调整浏览器窗口大小（resize），浏览器页面滚动（scroll），鼠标移动（mousemove）。也就是说用户在触发这些浏览器操作的时候，如果脚本里面绑定了对应的事件处理方法，这个方法就不停的触发。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,8 +2,8 @@
 title = "简单方法解决 Macbook 电源接口接触不良的问题"
 isCJKLanguage = true
 date = "2016-10-04 17:22:29 +0800"
-categories = ["mbp"]
-tags = ["apple"]
+categories = ["mac"]
+tags = ["macbook"]
 +++
 
 

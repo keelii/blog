@@ -1,8 +1,8 @@
 +++
-title = "Mac 下单独设置 command(⌘) 键点击功能"
+title = "MacOS 单独设置 command(⌘) 键点击功能"
 isCJKLanguage = true
-categories = ["Mac"]
-tags = ["keymap", "Win", "command"]
+categories = ["mac"]
+tags = ["keymap", "win", "command"]
 date = "2017-10-03T17:10:27.464Z"
 +++
 
@@ -69,10 +69,3 @@ vim ~/.config/karabiner/karabiner.json
 这样基本上的完成我的需求了，打开应用只需要按一次 ⌘ 即可呼出 Spotlight，像打开 Google Chrome 只需要两个键即可 `⌘ g`、Webstorm `⌘ w`、Firefox `⌘ f` ...
 
 > 备注：我用的机器是 Mac mini 主机 + filco 87 键盘
-
-
-
-
-
-
-
