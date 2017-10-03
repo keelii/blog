@@ -12,7 +12,7 @@ GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
 
 [outputFormats.RSS]
-baseName = "abc"
+    baseName = "atom"
 
 [permalinks]
     archives = "/:year/:month/:day/:filename/"
