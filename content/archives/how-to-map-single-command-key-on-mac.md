@@ -1,5 +1,5 @@
 +++
-title = "MacOS 单独设置 command(⌘) 键点击功能"
+title = "macOS 单独设置 command(⌘) 键点击功能"
 isCJKLanguage = true
 categories = ["mac"]
 tags = ["keymap", "win", "command"]

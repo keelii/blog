@@ -33,7 +33,7 @@ DisqusShortname = "keelii-blog"
 
 [[menu.main]]
     Name = "About"
-    URL = "/about"
+    URL = "/about/"
     weight = 3
 
 [params]
