@@ -10,7 +10,7 @@ tags = ["item", "javascript", "powerset"]
 
 这个问题来源于选择商品属性的场景。比如我们买衣服、鞋子这类物件，一般都需要我们选择合适的颜色、尺码等属性
 
-![color_size](//img14.360buyimg.com/devfe/jfs/t3118/276/4984729113/37788/61331934/585b8939Na04471ff.png)
+![color_size](https://img14.360buyimg.com/devfe/jfs/t3118/276/4984729113/37788/61331934/585b8939Na04471ff.png)
 
 先了解一下 sku 的学术概念吧
 
@@ -40,7 +40,7 @@ tags = ["item", "javascript", "powerset"]
 
 对应的在网页上大概是这样的 UI
 
-![ui_demo](//img10.360buyimg.com/devfe/jfs/t3307/119/4891794144/3339/dbde7abe/585b9042N5e527489.png)
+![ui_demo](https://img10.360buyimg.com/devfe/jfs/t3307/119/4891794144/3339/dbde7abe/585b9042N5e527489.png)
 
 这个时候，就会有一个问题，这些元子属性能组成的集合（用户的选择路径） **远远大于** 真正可以组成的集合，比如上面的属性集合可以组合成一个 [笛卡尔积](https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%84%BF%E7%A7%AF)，即。可以组合成以下序列：
 
@@ -84,11 +84,11 @@ tags = ["item", "javascript", "powerset"]
 
 看下图，如果我们定义红色为当前选中的商品的属性，即当前选中商品为 `红-大-A`，这个时候如何确认其它非已选属性是否可以组成可选路径？
 
-![ui_selected](//img13.360buyimg.com/devfe/jfs/t3100/104/4921509103/3867/ea2bdd9b/585b9636Nc5d3efd4.png)
+![ui_selected](https://img13.360buyimg.com/devfe/jfs/t3100/104/4921509103/3867/ea2bdd9b/585b9636Nc5d3efd4.png)
 
 **规则是这样的：** 假设当前用户想选 `白-大-A`，刚好这个选择路径是不存在的，那么我们就把 `白` 置灰
 
-![ui_selected_disabled](//img13.360buyimg.com/devfe/jfs/t3175/51/4906988054/3771/93679a78/585b9717Nf53b5e3e.png)
+![ui_selected_disabled](https://img13.360buyimg.com/devfe/jfs/t3175/51/4906988054/3771/93679a78/585b9717Nf53b5e3e.png)
 
 以此类推，如果要确认 `蓝` 属性是否可用，需要查找 `蓝-大-A` 路径是否存在
 
@@ -109,7 +109,7 @@ tags = ["item", "javascript", "powerset"]
 
 如果用户点击了 `白` 情况就变得复杂了很多，我们假设用户 **只选择了一个**元素 `白`，此时如何判断其它未选元素是否可选？
 
-![ui_selected_one](//img13.360buyimg.com/devfe/jfs/t3238/138/4916973929/3751/11a121a7/585b9c36N668cd64b.png)
+![ui_selected_one](https://img13.360buyimg.com/devfe/jfs/t3238/138/4916973929/3751/11a121a7/585b9c36N668cd64b.png)
 
 即：如何确定 `"大", "中", "小", "A", "B", "C"` 需要置灰？ 注意我们并不需要确认 `"红"，"蓝"` 是否可选，因为属性里面的元素都是 **单选**，当前的属性里任何元素都可选的
 
@@ -125,7 +125,7 @@ tags = ["item", "javascript", "powerset"]
 
 同时还有一个问题，如果已选的个数不确定而且维度可以增加到不确定呢？
 
-![ui_muli-attr](//img13.360buyimg.com/devfe/jfs/t3931/229/741708498/8439/ce1088f3/585ba187N9bf3b55d.png)
+![ui_muli-attr](https://img13.360buyimg.com/devfe/jfs/t3931/229/741708498/8439/ce1088f3/585ba187N9bf3b55d.png)
 
 这种情况下如果还按之前的算法，即使实现也非常复杂。这时候就要考虑换一种思维方式
 
@@ -133,7 +133,7 @@ tags = ["item", "javascript", "powerset"]
 
 之前我们都是反向思考，找出不可选应该置灰的元素。我们现在正向的考虑，如何确定属性是否可选。而且多维的情况下用户可以跳着选。比如：用户选了两个元素 `白，B`
 
-![ui_muli-attr_two](//img30.360buyimg.com/devfe/jfs/t3292/20/4882441565/5337/7c12589c/585ba3f5Nc07d80f6.png)  _图1_
+![ui_muli-attr_two](https://img30.360buyimg.com/devfe/jfs/t3292/20/4882441565/5337/7c12589c/585ba3f5Nc07d80f6.png)  _图1_
 
 我们再回过头来看下 **原始存在的数据**
 
@@ -212,7 +212,7 @@ function powerset(arr) {
 
 有了这个存在的子集集合，再回头看 _图1_ 举例：
 
-![ui_muli-attr_two](//img30.360buyimg.com/devfe/jfs/t3292/20/4882441565/5337/7c12589c/585ba3f5Nc07d80f6.png)  _图1_
+![ui_muli-attr_two](https://img30.360buyimg.com/devfe/jfs/t3292/20/4882441565/5337/7c12589c/585ba3f5Nc07d80f6.png)  _图1_
 
 * 如何确定 `红` 可选？ 只需要确定 `红-B` 可选
 * 如何确定 `中` 可选？ 需要确定 `白-中-B` 可选
@@ -301,11 +301,11 @@ function powerset(arr) {
 
 为了更清楚的说明这个算法，再上一张图来解释下吧：
 
-![color-size-sel](//img10.360buyimg.com/devfe/jfs/t3232/357/5124948788/54677/7df39060/58620377Nde9640c3.jpg)
+![color-size-sel](https://img10.360buyimg.com/devfe/jfs/t3232/357/5124948788/54677/7df39060/58620377Nde9640c3.jpg)
 
 所以根据上面的逻辑得出，计算状态后的界面应该是这样的：
 
-![color_size_with_state](//img12.360buyimg.com/devfe/jfs/t3160/115/5120711700/3214/2e9b7205/5862159bN7d072d5f.png)
+![color_size_with_state](https://img12.360buyimg.com/devfe/jfs/t3160/115/5120711700/3214/2e9b7205/5862159bN7d072d5f.png)
 
 现在这种情况下如果用户点击 尺码 `中` 应该怎么交互呢？
 
@@ -325,7 +325,7 @@ function powerset(arr) {
 
 这个过程的流程图大概是这样的，点进不存在的属性就会进入「单选流程」
 
-![select_diag](//img20.360buyimg.com/devfe/jfs/t3232/297/5253318434/61277/1eb899ea/58653ae6Nf0a3ed56.png)
+![select_diag](https://img20.360buyimg.com/devfe/jfs/t3232/297/5253318434/61277/1eb899ea/58653ae6Nf0a3ed56.png)
 
 假设后端数据是这样的：
 
@@ -340,11 +340,11 @@ function powerset(arr) {
 
 当前选中状态是：`白-大-A`
 
-![color_size_demo](//img10.360buyimg.com/devfe/jfs/t3235/190/5186335420/3376/e9633659/58624212Ne7f43d1f.png)
+![color_size_demo](https://img10.360buyimg.com/devfe/jfs/t3235/190/5186335420/3376/e9633659/58624212Ne7f43d1f.png)
 
 如果用户点击 `中`。这个时候 `白-中` 是存在的，但是 `中-A` 并不存在，所以保留颜色 `白`，高亮型号属性行：
 
-![color_size_demo_width_hl](//img13.360buyimg.com/devfe/jfs/t4111/305/936307630/3771/c6076a9c/58624270N59d19a52.png)
+![color_size_demo_width_hl](https://img13.360buyimg.com/devfe/jfs/t4111/305/936307630/3771/c6076a9c/58624270N59d19a52.png)
 
 由此可见和 `白-中` 能搭配存在型号只有 `B`，而缓存的作用就是为了少让用户选一次颜色 `白`
 
@@ -364,7 +364,7 @@ function powerset(arr) {
 ...
 ```
 
-![powerset_test](//img10.360buyimg.com/devfe/jfs/t3280/36/5011858321/16515/2187c9c/5864aa23N95cea203.png)
+![powerset_test](https://img10.360buyimg.com/devfe/jfs/t3280/36/5011858321/16515/2187c9c/5864aa23N95cea203.png)
 
 在 chrome 里面简单跑了几个用例，可见这个算法非常低效，如果要使用这个算法，必须控制维度在合理范围内，而且不仅仅算法时间复杂度很高，生成最后的路径表也会非常大，相应的占用内存也很高。
 

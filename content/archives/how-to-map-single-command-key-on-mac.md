@@ -25,13 +25,13 @@ Mac 中我通常使用 Spotlight 来快速切换程序。用惯了 Mac 的人会
 
 然而 Mac 系统中并不允许我们这么做 🤔，于是我使用了一个改键器 [Karabiner](https://pqrs.org/osx/karabiner/) 😎
 
-[![mac-karabiner](//img20.360buyimg.com/devfe/jfs/t9160/329/2610957899/117091/8481138f/59d34e67Nb3bd2a2d.png)](//img20.360buyimg.com/devfe/jfs/t9160/329/2610957899/117091/8481138f/59d34e67Nb3bd2a2d.png)
+[![mac-karabiner](https://img20.360buyimg.com/devfe/jfs/t9160/329/2610957899/117091/8481138f/59d34e67Nb3bd2a2d.png)](https://img20.360buyimg.com/devfe/jfs/t9160/329/2610957899/117091/8481138f/59d34e67Nb3bd2a2d.png)
 
 我的配置方法是使用 `Complex Modifications` 因为它允许我把修饰键改成其它按钮功能。在这里我将其改为一个没用的键位（f13 - PrtSc），因为 Spotlight 不接受单独的修饰键，所以只能这样区线救国了
 
 然后在系统偏好设置 - 键盘 - 快捷键 中将 Spotlight 设置成 F13
 
-[![mac-spotlight](//img12.360buyimg.com/devfe/jfs/t9769/96/578527884/124966/ff1a2f04/59d34fbeN5b1e4775.png)](//img12.360buyimg.com/devfe/jfs/t9769/96/578527884/124966/ff1a2f04/59d34fbeN5b1e4775.png)
+[![mac-spotlight](https://img12.360buyimg.com/devfe/jfs/t9769/96/578527884/124966/ff1a2f04/59d34fbeN5b1e4775.png)](https://img12.360buyimg.com/devfe/jfs/t9769/96/578527884/124966/ff1a2f04/59d34fbeN5b1e4775.png)
 
 注意：默认的 Complex Modifications 里面是空的，需要你手动导入一个叫 [Tapping modifier-keys produces a f-key.](https://pqrs.org/osx/karabiner/complex_modifications/#modifier_keys)。然后我们 `enable` 这条：**Press left_command alone produces F14**，噫~我们是要 map 成 F13 这里默认的是 F14，怎么改下呢。改配置文件吧，打开下面这个文件：
 

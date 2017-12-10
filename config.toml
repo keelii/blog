@@ -7,6 +7,7 @@ theme = "octo-enhance"
 EnableGitInfo = true
 disablePathToLower = true
 preserveTaxonomyNames = true
+rssLimit = 10
 
 GoogleAnalytics = "UA-79264835-1"
 DisqusShortname = "keelii-blog"
@@ -33,7 +34,7 @@ DisqusShortname = "keelii-blog"
 
 [[menu.main]]
     Name = "About"
-    URL = "/about/"
+    URL = "/about"
     weight = 3
 
 [params]
@@ -61,8 +62,8 @@ DisqusShortname = "keelii-blog"
     #     "/javascripts/octopress.js"
     # ]
     styles = [
-        "//fonts.crazy4code.com/css?family=PT+Serif:regular,italic,bold,bolditalic",
-        "//fonts.crazy4code.com/css?family=PT+Sans:regular,italic,bold,bolditalic",
+        # "//fonts.crazy4code.com/css?family=PT+Serif:regular,italic,bold,bolditalic",
+        # "//fonts.crazy4code.com/css?family=PT+Sans:regular,italic,bold,bolditalic",
         "/stylesheets/screen.css"
     ]
 
