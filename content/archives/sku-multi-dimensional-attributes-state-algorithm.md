@@ -3,7 +3,7 @@ title = "sku 多维属性状态判断算法"
 isCJKLanguage = true
 date = "2016-12-22T15:55:52+08:00"
 categories = ["jd", "algorithm"]
-tags = ["item", "javascript", "powerset"]
+tags = ["javascript", "powerset", "sku"]
 +++
 
 ## 问题描述
