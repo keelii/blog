@@ -1,11 +1,11 @@
 name = "octo-enhance"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = ""
 description = "Strictly copied from octopress default theme, and a little more enhancement"
-homepage = "https://keelii.github.io/"
+homepage = "https://keelii.com/"
 tags = ["octopress"]
 min_version = 0.17
 
 [author]
   name = "keelii"
-  homepage = "https://keelii.github.io/"
+  homepage = "https://keelii.com/"

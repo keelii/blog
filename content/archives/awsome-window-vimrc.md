@@ -317,7 +317,7 @@ Git 命令增强工具，在 vim 使用 git，状态栏的分类名称就是调�
 
 #### Neocomplete
 
-自动补全插件，这个代码实例插件是需要 lua 支持的，可能你需要手动编译一个带 lua 支持版本的 gvim，[下篇文章](https://keelii.github.io/2016/06/14/compile-vim-on-windows-with-lua-support/) 我将记录下自己在 Windows 上编译安装的过程
+自动补全插件，这个代码实例插件是需要 lua 支持的，可能你需要手动编译一个带 lua 支持版本的 gvim，[下篇文章](/2016/06/14/compile-vim-on-windows-with-lua-support/) 我将记录下自己在 Windows 上编译安装的过程
 
 什么？你说为啥不装 YouCompleteMe，官方作者都不支持的插件就别折腾了吧，Neocomplete 这个实例插件对于我的情况来说已经够用了
 
