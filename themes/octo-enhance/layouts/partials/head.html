@@ -11,6 +11,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if .IsHome }}
+    <meta name="msvalidate.01" content="5A15ECDE419A3094963BBE769402AFF3" />
+    <meta name="360-site-verification" content="4b136227b95b65dac3fb4c4648b3f768" />
+    <meta name="sogou_site_verification" content="O1Cfr1TQve"/>
+    {{- end }}
 
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ "/favicon.ico" | absURL }}" rel="icon">
@@ -26,7 +31,6 @@
     {{- end }}
     {{- end }}
 
-    <meta name="360-site-verification" content="97274d5ff16511caf615a565d3257ce8">
     {{ partial "google_analytics.html" . }}
 </head>
 <body>
