@@ -1,5 +1,5 @@
 +++
-title = "又双叕写了一个 host 管理插件"
+title = "又双叒叕写了一个 host 管理插件"
 isCJKLanguage = true
 categories = ["chrome", "webdev"]
 tags = ["plugin","host"]

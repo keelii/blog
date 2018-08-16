@@ -1,7 +1,7 @@
 {{ if and (.TableOfContents) (eq .Type "archives") }}
 <section id="side-toc" class="side-toc odd" style="width: 100%;">
     <h2>Table  of contents</h2>
-    {{ .TableOfContents }}
+    {{ .TableOfContents | replaceRE "<ul>[[:space:]]*<li>[[:space:]]*<ul>" "<ul>" | replaceRE "</ul>[[:space:]]*</li>[[:space:]]*</ul>" "</ul>" |  safeHTML }}
 </section>
 {{ else }}
     {{ partial "widgets.html" . }}

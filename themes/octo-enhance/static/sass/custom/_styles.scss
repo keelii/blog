@@ -133,7 +133,7 @@ table {
   border-color:#ddd;
 }
 
-#content {
+#content .sidebar {
   h2 {
     font-size: 1.5em;
     margin: 1.5em 0 0;
@@ -145,6 +145,9 @@ table {
 }
 #TableOfContents {
   padding-bottom: 0.5em;
+  >ul {
+    padding-left: 0;
+  }
   li {
     border-bottom: none;
     box-shadow: none;
@@ -155,11 +158,8 @@ table {
       display: block;
       padding: .5em 0;
     }
-  }
-  >ul>li {
-    padding-left: 0;
-    >ul>li {
-      padding-left: 0;
+    ul {
+      padding-left: 1em;
     }
   }
 }
