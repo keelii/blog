@@ -133,7 +133,29 @@ table {
   border-color:#ddd;
 }
 
+#content {
+  h2 {
+    font-size: 1.5em;
+    margin: 1.5em 0 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: white 0 1px;
+    line-height: 1.2em;
+  }
+}
 #TableOfContents {
+  padding-bottom: 0.5em;
+  li {
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0;
+    a {
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: white 0 1px;
+      display: block;
+      padding: .5em 0;
+    }
+  }
   >ul>li {
     padding-left: 0;
     >ul>li {
