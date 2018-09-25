@@ -97,7 +97,7 @@ h3.filename {
   + pre { @include border-top-radius(0px); }
 }
 
-p, li {
+table, p, li {
   code {
     @extend .mono;
     display: inline-block;
@@ -107,9 +107,11 @@ p, li {
     line-height: 1.5em;
     color: #555;
     border: 1px solid #ddd;
-    @include border-radius(.4em);
+    @include border-radius(.3em);
     padding: 0 .3em;
     margin: -1px 0;
+    white-space: nowrap;
+    vertical-align: text-bottom;
   }
   pre code { font-size: 1em !important; background: none; border: none; }
 }
