@@ -3,7 +3,7 @@ title = "我理解的 iOS 与 Android 的区别"
 isCJKLanguage = true
 categories = ["OS"]
 tags = ["iOS", "android", "apple", "google"]
-date = "2018-10-15T19:10:27.464Z"
+date = "2018-10-15T19:10:24.464Z"
 +++
 
 事实上在讲清楚这个问题之前，必须知道一个所有人都无法拒绝的常识，即：对大多数人来说 iOS 绝对比 Android 好用。本文试着从使用者的角度出发谈谈自己对两个手机端操作系统的理解与认识
