@@ -70,15 +70,7 @@ date = "2018-11-04T19:10:24.464Z"
 
 最后再附送一条之前真正让我产生转换率的广告，也是 youtube 推荐的，起初我并不知道这是个什么东西，看完之后莫名的被吸引，然后去搜索相关资料，了解了这个品牌的一些设计理念，刚好赶上七夕，所以就顺利成章的形成了一次「冲动」购买
 
-
 <p class="video-wrap">
 <iframe width="100%" src="https://www.youtube.com/embed/PGmEERI3vTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-子曰：「君子无所争，必也射乎！揖让而升，下而饮，其争也君子。」
-
-https://www.youtube.com/watch?v=15NXrnyT2HM
-https://www.youtube.com/watch?v=Fueho8FMaZ8
-https://www.youtube.com/watch?v=g13hxWfSisY
-https://www.youtube.com/watch?v=0tSTRc0Rsn4
-https://www.youtube.com/watch?v=PGmEERI3vTE
