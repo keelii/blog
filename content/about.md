@@ -9,9 +9,11 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 ### Portfolio
 
-* [Simple Note](https://note.crazy4code.com/notes)
-* [FE Player@zhihu](https://zhuanlan.zhihu.com/fe-player)
-* [Awesome Host Manager(chrome plugin)](https://chrome.google.com/webstore/detail/awesome-host-manager/pikaoeecieigblebdddckmlegonlogha?hl=zh-CN)
+* [ZenWriter](https://zen-writer.com) __禅意写作__ 一个简洁、纯粹的 Markdown 写作应用
+* [Simple Note](https://note.crazy4code.com/notes) - 简单笔记 - 一个基于 Flask 的在线笔记本应用
+* [FE Player@zhihu](https://zhuanlan.zhihu.com/fe-player) - 知乎专栏「前端玩家」
+* [Wooo](https://github.com/keelii/wo) 一个前端工程自动化打包工具
+* [Awesome Host Manager(chrome plugin)](https://chrome.google.com/webstore/detail/awesome-host-manager/pikaoeecieigblebdddckmlegonlogha?hl=zh-CN) - Chrome Host 管理插件
 
 ### License
 
