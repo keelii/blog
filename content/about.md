@@ -9,7 +9,7 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 ### Portfolio
 
-* [ZenWriter](https://zen-writer.com) __禅意写作__ 一个简洁、纯粹的 Markdown 写作应用
+* [ZenWriter](https://zen-writer.com) **禅意写作** 一个简洁、纯粹的 Markdown 写作应用
 * [Simple Note](https://note.crazy4code.com/notes) - 简单笔记 - 一个基于 Flask 的在线笔记本应用
 * [FE Player@zhihu](https://zhuanlan.zhihu.com/fe-player) - 知乎专栏「前端玩家」
 * [Wooo](https://github.com/keelii/wo) 一个前端工程自动化打包工具
@@ -19,5 +19,6 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 All articles are under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) License
 
-> This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.
-本许可协议允许其他人再混合、调整和基于您的作品进行非商业性创作，只要他们标识您的姓名或名称，并以相同条款许可他们的新作品。—— [关于许可协议](https://creativecommons.org/licenses/?lang=zh)
+> This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms. 本许可协议允许其他人再混合、调整和基于您的作品进行非商业性创作，只要他们标识您的姓名或名称，并以相同条款许可他们的新作品。—— [关于许可协议](https://creativecommons.org/licenses/?lang=zh)
+
+本博客文章皆为原创，转载请务必先联系我，确认后注明链接出处即可
