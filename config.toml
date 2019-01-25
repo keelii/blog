@@ -1,5 +1,5 @@
 baseurl = "https://keelii.com/"
-title = "Something"
+title = "臨池不輟"
 isCJKLanguage = true
 languageCode = "zh-CN"
 paginatePath = "posts"
@@ -49,12 +49,13 @@ DisqusShortname = "keelii-blog"
         "/javascripts/post.js",
     ]
     pageStyles = [
-        "//cdn.bootcss.com/highlight.js/9.7.0/styles/solarized-dark.min.css"
+        "https://cdn.bootcss.com/highlight.js/9.13.1/styles/default.min.css"
+        # "//cdn.bootcss.com/highlight.js/9.7.0/styles/solarized-dark.min.css"
     ]
 
     scripts = [
-        "//cdn.bootcss.com/zepto/1.2.0/zepto.min.js",
-        "/javascripts/octopress.js"
+        # "//cdn.bootcss.com/zepto/1.2.0/zepto.min.js",
+        # "/javascripts/octopress.js"
     ]
     # scripts = [
     #     "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",

@@ -33,7 +33,7 @@ ProseMirror 的主要原则是：*你的代码对于**文档**及其事件变更
 
 就像拼乐高积木一样，下面的代码可以创建一个最小化的编辑器：
 
-```
+```js
 import {schema} from "prosemirror-schema-basic"
 import {EditorState} from "prosemirror-state"
 import {EditorView} from "prosemirror-view"
@@ -54,7 +54,7 @@ ProseMirror 需要你为文档指定一个自己觉得合适的骨架（schema�
 
 这些过程都会默认地在后台处理，但是你可以写一个插件来挂载进去，或者通过配置视图的参数。例如，下面的代码添加了一个 `dispatchTransaction` 属性（props），每当创建一个事务时都会调用它
 
-```
+```js
 // (省略了导入代码库)
 
 let state = EditorState.create({schema})
@@ -77,7 +77,7 @@ let view = new EditorView(document.body, {
 
 让我们为编辑器添加这两个插件来获取撤消（undo）/重做（redo）的功能：
 
-```
+```js
 // (Omitted repeated imports)
 import {undo, redo, history} from "prosemirror-history"
 import {keymap} from "prosemirror-keymap"
@@ -100,7 +100,7 @@ let view = new EditorView(document.body, {state})
 
 `prosemirror-commands` 包提供了许多基本的编辑命令，其中一些是你可以需要用到的基本的快捷键，比如 回车，删除编辑器中指定的内容
 
-```
+```js
 // (Omitted repeated imports)
 import {baseKeymap} from "prosemirror-commands"
 
@@ -127,7 +127,7 @@ let view = new EditorView(document.body, {state})
 
 下面我们通过传入一个 DOM 元素 （ID 为 content）做为 DOM parser 的参数初始化一个状态，它将利用 `schema` 中的信息来解析出对应的节点：
 
-```
+```js
 import {DOMParser} from "prosemirror-model"
 import {EditorState} from "prosemirror-state"
 import {schema} from "prosemirror-schema-basic"
@@ -150,7 +150,7 @@ ProseMirror 定义了他自己的一种用来表示文档内容的数据结构�
 
 在 HTML 中，一个段落的标记表示为一个树，就像这个：
 
-```
+```html
 <p>This is <strong>strong text with <em>emphasis</em></strong></p>
 ```
 
@@ -209,7 +209,7 @@ ProseMirror 定义了他自己的一种用来表示文档内容的数据结构�
 
 什么样的节点可以被允许，是由文档的骨架决定的。用代码的方式创建节点（而不是直接用基础骨架库），你必须通过骨架来实现，比如使用 `node` 和 `text` 方法
 
-```
+```js
 import {schema} from "prosemirror-schema-basic"
 
 // 如果需要的话可以把 null 参数替换成你想给节点添加的属性
@@ -235,7 +235,7 @@ ProseMirror 节点支持两种索引 — 它们可以看做是树，使用单个
 
 因此，如果你有一个文档，当表示为 HTML 时，将如下所示：
 
-```
+```html
 <p>One</p>
 <blockquote><p>Two<img src="..."></p></blockquote>
 ```
@@ -264,7 +264,7 @@ ProseMirror 节点支持两种索引 — 它们可以看做是树，使用单个
 
 Slice 数据结构用于表示这样的切片。它存储一个 fragment 以及两侧的 节点打开深度（open depth）。你可以在节点上使用切片方法从文档外剪切切片
 
-```
+```js
 /*
 0   1 2 3   4
  <p> a b </p>
@@ -309,7 +309,7 @@ console.log(slice2.openStart, slice2.openEnd) // → 1 1
 
 定义骨架时，可以枚举其中可能出现的节点类型，并使用 `spec` 对象描述：
 
-```
+```js
 const trivialSchema = new Schema({
   nodes: {
     doc: {content: "paragraph+"},
@@ -336,7 +336,7 @@ const trivialSchema = new Schema({
 
 某些元素类型组将在你的模式中出现多种类型 — 例如，你可能有一个「块」节点的概念，它可能出现在顶层但也嵌套在块引用内。你可以通过为节点规范提供 group 属性来创建节点组，然后在表达式中按名称引用该组
 
-```
+```js
 const groupSchema = new Schema({
   nodes: {
     doc: {content: "block+"},
@@ -363,7 +363,7 @@ const groupSchema = new Schema({
 
 这有一个简单的骨架，支持段落中文本的 strong 和 emphasis 标记，但不支持标题：
 
-```
+```js
 const markSchema = new Schema({
   nodes: {
     doc: {content: "block+"},
@@ -386,7 +386,7 @@ const markSchema = new Schema({
 
 属性集可以认为就是普通对象，具有预定义（每个节点或标记）属性集，包含任何 JSON 可序列化值。要指定它允许的属性，请使用节点中的可选 attrs 字段或标记规范
 
-```
+```js
 heading: {
   content: "text*",
   attrs: {level: {default: 1}}
@@ -403,7 +403,7 @@ heading: {
 
 该字段应包含一个函数，当以节点作为参数调用时，该函数返回该节点的DOM 结构的描述。这可以是直接 DOM 节点或描述它的数组，例如：
 
-```
+```js
 const schema = new Schema({
   nodes: {
     doc: {content: "paragraph+"},
@@ -424,7 +424,7 @@ Mark specs 允许类似于 toDOM 方法，但它们需要渲染成直接包装�
 
 这可以列出一个解析规则数组，它描述映射到给定节点或标记的 DOM 结构。例如，基础骨架具有以下表示 emphasis 标记：
 
-```
+```js
 parseDOM: [
   {tag: "em"},                 // Match <em> nodes
   {tag: "i"},                  // and <i> nodes
@@ -470,7 +470,7 @@ schema-list 模块导出一个便捷方法，将这些模块导出的节点添�
 
 可以将步骤应用于文档来成新文档
 
-```
+```js
 console.log(myDoc.toString()) // → p("hello")
 // A step that deletes the content between positions 3 and 5
 let step = new ReplaceStep(3, 5, Slice.empty)
@@ -486,7 +486,7 @@ console.log(result.doc.toString()) // → p("heo")
 
 一个编辑动作可以产生一个或多个步骤（step）。处理一系列步骤最方便的方法是创建一个 `Transform` 对象（或者，如果你正在使用整个编辑器状态，则可以使用 `Transaction`，它是 `Transform` 的子类）
 
-```
+```js
 let tr = new Transform(myDoc)
 tr.delete(5, 7) // Delete between position 5 and 7
 tr.split(5)     // Split the parent node at position 5
@@ -504,7 +504,7 @@ console.log(tr.steps.length)   // → 2
 
 我们经常需要保留文档更改的位置，例如选区边界。为了解决这个问题，步骤可以为你提供一个字典映射，可以在应用该步骤之前和之后进行转换并且应用应该步骤
 
-```
+```js
 let step = new ReplaceStep(4, 6, Slice.empty) // Delete 4-5
 let map = step.getMap()
 console.log(map.map(8)) // → 6
@@ -526,7 +526,7 @@ console.log(tr.mapping.map(10)) // → 9
 
 但是有时候你需要一些其它的行为，这是为什么 map 方法有第二个参数 `bias` 的原因，你可以设置成 -1 当内容被插入到前面时保持你的位置
 
-```
+```js
 console.log(tr.mapping.map(10, -1)) // → 7
 ```
 
@@ -542,7 +542,7 @@ console.log(tr.mapping.map(10, -1)) // → 7
 
 一个 ProseMirror 的状态由三个主要的组件构成：`doc`, `selection` 和 `storedMarks`
 
-```
+```js
 import {schema} from "prosemirror-schema-basic"
 import {EditorState} from "prosemirror-state"
 
@@ -569,7 +569,7 @@ ProseMirror 支持几种选区类型（并允许三方代码定义新的选区�
 
 通过将一个事务应用于现有状态，来生成新状然后进行状态更新。从概念上讲，它们只发生一次：给定旧状态和事务，为状态中的每个组件计算一个新值，并将它们放在一个新的状态值中
 
-```
+```js
 let tr = state.tr
 console.log(tr.doc.content.size) // 25
 tr.insertText("hello") // Replaces selection with 'hello'
@@ -583,7 +583,7 @@ console.log(tr.doc.content.size) // 30
 
 默认情况下，旧选区通过每个步骤映射以生成新选区，但可以使用 `setSelection` 显式设置新选区
 
-```
+```js
 let tr = state.tr
 console.log(tr.selection.from) // → 10
 tr.delete(6, 8)
@@ -606,7 +606,7 @@ console.log(tr.selection.from) // → 3
 
 创建一个插件，你可以传入一个对象来指定它的行为：
 
-```
+```js
 let myPlugin = new Plugin({
   props: {
     handleKeyDown(view, event) {
@@ -621,7 +621,7 @@ let state = EditorState.create({schema, plugins: [myPlugin]})
 
 当一个插件需要他自己的状态槽时，可以定义一个 `state` 属性：
 
-```
+```js
 let transactionCounter = new Plugin({
   state: {
     init() { return 0 },
@@ -642,7 +642,7 @@ function getTransactionCount(state) {
 
 为此，事务允许附加元数据（metadata）。我们可以更新我们的事务计数器插件，过滤那些被标记过的事务，如下所示：
 
-```
+```js
 let transactionCounter = new Plugin({
   state: {
     init() { return 0 },
@@ -686,7 +686,7 @@ ProseMirror 编辑器视图是一个 UI 组件，它向用户显示编辑器状�
 
 由于事务是通过 `dispatchTransaction` 属性来调度的，所以拦载事务是可以的做到的，为了将这个循环数据流连接到一个更大的周期 — 如果你的整个应用程序使用这样的数据流模型，就像类似 Redux 的体系结构一样，你可以使 ProseMirror 的事务与主动作调度（main action-dispatching）周期集成起来，将 ProseMirror 的状态保留在你应用程序的 `store` 中
 
-```
+```js
 // The app's state
 let appState = {
   editor: EditorState.create({schema}),
@@ -731,7 +731,7 @@ function draw() {
 
 大体上讲 Props 很有用，这是从 React 学过来的。属性就像是 UI 组件中的参数。理想情况下，组件的属性完全定义其行为
 
-```
+```js
 let view = new EditorView({
   state: myState,
   editable() { return false }, // Enables read-only behavior
@@ -743,7 +743,7 @@ let view = new EditorView({
 
 插件可以声明除了 `state` 和 `dispatchTransaction` 以外的任意属性，它们可以直接传给视图
 
-```
+```js
 function maxSizePlugin(max) {
   return new Plugin({
     props: {
@@ -765,7 +765,7 @@ function maxSizePlugin(max) {
 
 为了能够有效地绘制和比较装饰器，它们需要作为装饰数组提供（这是一种模仿实际文档的树形数据结构）。你可以使用静态 `create` 方法创建，提供文档和装饰对象数组
 
-```
+```js
 let purplePlugin = new Plugin({
   props: {
     decorations(state) {
@@ -779,7 +779,7 @@ let purplePlugin = new Plugin({
 
 如果你有很多装饰器，那么每次重新绘制时都要重新创建这些装置成本会很高。这种情况下，维护装饰器的推荐方法是将数组放在插件的状态中，通过更改将其映射到之前的状态，并且只在需要时进行更改
 
-```
+```js
 let specklePlugin = new Plugin({
   state: {
     init(_, {doc}) {
@@ -808,7 +808,7 @@ let specklePlugin = new Plugin({
 
 还有一种方法可以影响编辑器视图绘制文档的方式。节点视图可以为文档中的各个节点定义一种微型的 UI 组件。它们允许你展示 DOM，定义更新方式，并编写自定义代码以及响应事件
 
-```
+```js
 let view = new EditorView({
   state,
   nodeViews: {
@@ -835,7 +835,7 @@ class ImageView {
 
 通常你可能会有与节点交互以影响文档中的实际节点的需求。但是要创建更改节点的事务，首先需要知道该节点的位置。为此，节点视图将传递一个 getter 函数，该函数可用于查询文档中当前节点的位置。让我们修改示例，实现单击节点查询你输入图像的 alt 文本：
 
-```
+```js
 let view = new EditorView({
   state,
   nodeViews: {
@@ -866,7 +866,7 @@ class ImageView {
 
 节点更新后，默认行为是保持节点外部 DOM 结构不变，并将其子项与新的子元素集进行比较，根据需要更新或替换它们。节点视图可以使用自定义行为覆盖它，这允许我们执行类似于根据内容更改段落类（css class）属性的操作
 
-```
+```js
 let view = new EditorView({
   state,
   nodeViews: {
@@ -903,7 +903,7 @@ class ParagraphView {
 
 出于实际原因考虑，命令的接口稍微有点复杂。一个接收 `state` 和 `dispatch` 参数的函数，该函数返回一个布尔值。下面是一个非常简单的例子：
 
-```
+```js
 function deleteSelection(state, dispatch) {
   if (state.selection.empty) return false
   dispatch(state.tr.deleteSelection())
@@ -915,7 +915,7 @@ function deleteSelection(state, dispatch) {
 
 为了能够查询一个命令对于一个状态下是否具有**可执行性**（可执行但又不通过执行来验证），`dispatch` 参数是可选的 — 当命令被调用并且没传入 dispatch 参数时，如果命令具有可执行性，那就应该什么也不做并返回 true
 
-```
+```js
 function deleteSelection(state, dispatch) {
   if (state.selection.empty) return false
   if (dispatch) dispatch(state.tr.deleteSelection())
@@ -927,7 +927,7 @@ function deleteSelection(state, dispatch) {
 
 这种行式下，命令并不需要访问实际的编辑器视图 — 大多数命令都不需要，这样的话命令就可以在设置中应用和测试而不必关心视图是否可用。但是有的命令则偏偏需要与 DOM 交互 — 可能需要查询指定的位置是否在文本块儿后面，或者打开一个相对于视图定位的对话框。为了解决这种需求，命令还提供了第三个（整个编辑器视图）参数
 
-```
+```js
 function blinkView(_state, dispatch, view) {
   if (dispatch) {
     view.dom.style.background = "yellow"
@@ -969,7 +969,7 @@ ProseMirror 的协作编辑使用了一种中央集权式的系统，它会决�
 
 让我们实现一个简单的集权式的系统，它在与编辑器相同的 JavaScript 环境中运行
 
-```
+```js
 class Authority {
   constructor(doc) {
     this.doc = doc
@@ -1010,7 +1010,7 @@ class Authority {
 
 `collab` 模块导出一个 `collab` 函数，该函数返回一个插件，负责跟踪本地变更，接收远程变更，并对于何时必须将某些内容发送到中央机构做出指示
 
-```
+```js
 import {EditorState} from "prosemirror-state"
 import {EditorView} from "prosemirror-view"
 import {schema} from "prosemirror-schema-basic"

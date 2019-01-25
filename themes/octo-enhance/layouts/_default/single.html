@@ -16,7 +16,7 @@
 
                 <div class="entry-content">{{ .Content }}</div>
                 <footer>
-                    <p class="meta">
+                    <p class="meta" style="display:none">
                         <span class="byline author vcard">Posted</span>
                         {{ if (.Params.categories) }}
                         <span class="span">on</span>
@@ -28,6 +28,7 @@
                         </span>
                         {{ end }}
                     </p>
+                    
                     <p class="meta">
                         <span class="span">Last modified •</span>
                         <time class="entry-date" datetime="{{ .Lastmod.Format "2006-01-02 15:04:05" }}">

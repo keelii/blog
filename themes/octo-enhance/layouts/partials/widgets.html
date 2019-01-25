@@ -1,23 +1,5 @@
-<section>
-    <p style="text-align:center"><img width="200" height="200" src="//img10.360buyimg.com/devfe/jfs/t1/2176/40/10914/39038/5bcc43aaEcc0d75c0/e0e19b8edc123beb.jpg" alt="qrcode_for_gh_f2ea7d4767c1_430" /></p> 
-    <p><strong>肆零玖陆</strong> - <em>编程有两种「一种是 for 饭，另一种还是 for fun」</em></p>
-</section>
-
-{{ if eq .Site.Params.sidebar.recent true }}
-<section class="odd">
-    <h2>Recent Posts</h2>
-    <ul id="recent_posts">
-        {{ range first .Site.Params.sidebar.recentCount (where .Site.AllPages "Section" "archives") }}
-        <li class="post">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-    </ul>
-</section>
-{{ end }}
-
 {{ if eq .Site.Params.sidebar.category true }}
-<section class="even">
+<section class="even" style="display:none;">
     <h2>Categories</h2>
     <ul id="category-list">
         {{ range $name, $items := .Site.Taxonomies.categories }}
@@ -28,7 +10,3 @@
     </ul>
 </section>
 {{ end }}
-
-<section class="odd ad">
-    <a href="https://www.vultr.com/?ref=6805146"><img src="https://www.vultr.com/media/banner_1.png" width="728" height="90"></a>
-</section>

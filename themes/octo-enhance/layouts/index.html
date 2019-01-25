@@ -29,11 +29,10 @@
             {{ if gt $paginator.TotalPages 1 }}
             <div class="pagination">
                 {{ if $paginator.HasNext }}
-                <a class="prev" href="{{ $paginator.Next.URL }}">← Older</a>
+                <a class="prev" href="{{ $paginator.Next.URL }}">← Prev</a>
                 {{ end }}
-                <a href="{{ "/archives" | absURL }}">Blog Archives</a>
                 {{ if $paginator.HasPrev }}
-                <a class="next" href="{{ $paginator.Prev.URL }}">Newer →</a>
+                <a class="next" href="{{ $paginator.Prev.URL }}">Next →</a>
                 {{ end }}
             </div>
             {{ end }}

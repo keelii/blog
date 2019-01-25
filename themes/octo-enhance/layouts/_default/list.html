@@ -16,19 +16,21 @@
                         <h2>{{ .Key }}</h2>
                         {{- range .Pages }}
                         <article>
-                            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                            <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-                                <span class="date">{{ .Date.Format "Jan" }}</span>
-                                <span class="time">{{ .Date.Format "2" }}</span>
-                            </time>
-                            <footer>
-                                <div class="categories">
-                                    posted in
-                                    {{ range .Params.categories }}
-                                    <a class="category" href="{{ "/categories/"  }}{{ . | urlize }}">{{ . }}</a>
-                                    {{ end }}
-                                </div>
-                            </footer>
+                            <header>
+                                <h1>
+                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                </h1>
+                                <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+                                    <span class="date">{{ .Date.Format "Jan" }}</span>
+                                    <span class="time">{{ .Date.Format "2" }}</span>
+                                </time>
+                            </header>
+                            <div class="categories">
+                                in
+                                {{ range .Params.categories }}
+                                <a class="category" href="{{ "/categories/"  }}{{ . | urlize }}">{{ . }}</a>
+                                {{ end }}
+                            </div>
                         </article>
                         {{- end }}
                     {{ end }}

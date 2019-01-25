@@ -1,4 +1,4 @@
-<ul class="main-navigation">
+<!-- <ul class="main-navigation">
     <!-- links to root open in the same window - other links will be opened in a new window if navigationNewWindow is set to true in the config file -->
     {{ range .Site.Menus.main }} {{ if eq .URL "/" }}
     <li><a href="{{ .URL | absURL }}" title="{{ .Name }}">{{ .Name }}</a>
@@ -7,7 +7,7 @@
     <li><a href="{{ .URL | absURL }}" title="{{ .Name }}" {{ if eq $.Site.Params.navigationNewWindow true }} target="_blank" {{ end }}>{{ .Name }}</a>
     </li>
     {{ end }} {{ end }}
-</ul>
+</ul> -->
 
 <!-- http://fontawesome.io icon fa-lg adapts it to size (at least it is supposed to) -->
 <ul class="subscription">
