@@ -46,16 +46,15 @@ DisqusShortname = "keelii-blog"
     mathJax = "//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     pageScripts = [
         "/javascripts/highlight.pack.js",
-        "/javascripts/post.js",
+        # "/javascripts/post.js",
     ]
     pageStyles = [
         "https://cdn.bootcss.com/highlight.js/9.13.1/styles/default.min.css"
-        # "//cdn.bootcss.com/highlight.js/9.7.0/styles/solarized-dark.min.css"
     ]
 
     scripts = [
         # "//cdn.bootcss.com/zepto/1.2.0/zepto.min.js",
-        # "/javascripts/octopress.js"
+        # "/javascripts/hotkey.js"
     ]
     # scripts = [
     #     "//cdn.bootcss.com/jquery/1.9.1/jquery.min.js",

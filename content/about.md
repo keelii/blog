@@ -33,7 +33,7 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 ### 字体
 
-博客用到了以下开源字体：
+博客用到了以下字体：
 
 * 正文中文 - [思源宋体](https://source.typekit.com/source-han-serif/cn/) [下载 »](http://storage.jd.com/blogfont/SourceHanSerifCN.zip)
 * 正文中文 - [思源黑体](https://github.com/adobe-fonts/source-han-sans) [下载 »](http://storage.jd.com/blogfont/SourceHanSansCN.zip)
