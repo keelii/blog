@@ -64,7 +64,7 @@ DisqusShortname = "keelii-blog"
     styles = [
         # "//fonts.crazy4code.com/css?family=PT+Serif:regular,italic,bold,bolditalic",
         # "//fonts.crazy4code.com/css?family=PT+Sans:regular,italic,bold,bolditalic",
-        "/stylesheets/screen.css"
+        "/stylesheets/main.css"
     ]
 
 [params.sidebar]
