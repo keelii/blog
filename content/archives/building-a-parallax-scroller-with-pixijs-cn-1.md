@@ -14,10 +14,10 @@ date = "2019-03-16T19:20:04-07:00"
 [PART 3](http://www.yeahbutisitflash.com/?p=6496)・
 [PART 4](http://www.yeahbutisitflash.com/?p=7046)
 
-译文：
-[第一篇](/2019/03/16/building-a-parallax-scroller-with-pixijs-cn-1/)・
-[第二篇](/2019/03/17/building-a-parallax-scroller-with-pixijs-cn-2/)・
-第三篇・
+译文： 
+[第一篇](/2019/03/16/building-a-parallax-scroller-with-pixijs-cn-1/)・ 
+[第二篇](/2019/03/17/building-a-parallax-scroller-with-pixijs-cn-2/)・ 
+[第三篇](/2019/03/19/building-a-parallax-scroller-with-pixijs-cn-3/)・ 
 第四篇
 
 ---

@@ -1,7 +1,8 @@
 +++
-title = "使用 Pixi.js 构建一个视差滚动器（第二篇）"
+title = "使用 Pixi.js 构建一个视差滚动器（第四篇）"
 isCJKLanguage = true
 categories = ["fe"]
+draft=true
 tags = ["game", "pixi.js"]
 date = "2019-03-17T19:20:04-07:00"
 +++
@@ -14,10 +15,10 @@ date = "2019-03-17T19:20:04-07:00"
 [PART 3](http://www.yeahbutisitflash.com/?p=6496)・
 [PART 4](http://www.yeahbutisitflash.com/?p=7046)
 
-译文： 
-[第一篇](/2019/03/16/building-a-parallax-scroller-with-pixijs-cn-1/)・ 
-[第二篇](/2019/03/17/building-a-parallax-scroller-with-pixijs-cn-2/)・ 
-[第三篇](/2019/03/19/building-a-parallax-scroller-with-pixijs-cn-3/)・ 
+译文：
+[第一篇](/2019/03/16/building-a-parallax-scroller-with-pixijs-cn-1/)・
+[第二篇](/2019/03/17/building-a-parallax-scroller-with-pixijs-cn-2/)・
+第三篇・
 第四篇
 
 ---
@@ -875,7 +876,7 @@ function update() {
 
 本系列教程的第二部分即将结束。在我们完成之前，让我们回顾下 index.html 并做最后一个重构。
 
-虽然我们已经完成了减少对全局变量的依赖的这样一项令人敬重的工作，但我们的 index.html 文件仍然有一些零散的全局变量。实际上，在大型应用程序中，将尽可能多的 JavaScript 与 HTML 页面分开也是一种很好的做法。虽然我们的 HTML 页面中没有多少 JavaScript，但我们可以做得更好。让我们把代码单独封装在一个与自己类名相同的文件中。这样，我们当前所依赖的全局变量将封装到类的成员变量中。
+虽然我们已经完成了减少对全局变量的依赖的这样一项令人敬重的工作，但我们的 index.html 文件仍然有一些零散的全局变量。实际上，在大型应用程序中，将尽可能多的 JavaScript 与 HTML 页面分开也是一种很好的做法。虽然我们的 HTML 页面中没有多少 JavaScript，但我们可以做得更好。让我们把代码单独封装在一个与自己类名相同的文件中。这样，我们当前所依赖的全局变量将成为我们新类的成员变量。
 
 创建一个新文件并将其命名为 `Main.js`。
 
