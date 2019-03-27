@@ -1,15 +1,15 @@
 {{ partial "header.html" . }}
 
-<div id="main">
-    <div id="content">
+<div id="main" class="container">
+    <div id="content" class="typo">
         <div class="blog-index">
             {{ $paginator := .Paginate (where .Data.Pages "Type" "archives") }}
             {{ range $paginator.Pages }}
             <article>
                 <header>
-                    <h1>
+                    <h2>
                         <div class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-                    </h1>
+                    </h2>
                     <p class="meta">
                         <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
                             <span class="date">{{ .Date.Format "Jan, 2, 2006" }}</span>
@@ -27,14 +27,14 @@
             {{ end }}
 
             {{ if gt $paginator.TotalPages 1 }}
-            <div class="pagination">
+            <p class="pagination salign">
                 {{ if $paginator.HasNext }}
-                <a class="prev" href="{{ $paginator.Next.URL }}">← Prev</a>
+                <a class="btn outline secondary prev" href="{{ $paginator.Next.URL }}">← Prev</a>
                 {{ end }}
                 {{ if $paginator.HasPrev }}
-                <a class="next" href="{{ $paginator.Prev.URL }}">Next →</a>
+                <a class="btn outline secondary next" href="{{ $paginator.Prev.URL }}">Next →</a>
                 {{ end }}
-            </div>
+            </p>
             {{ end }}
         </div>
         {{ partial "sidebar.html" . }}
@@ -42,4 +42,3 @@
 </div>
 
 {{ partial "footer.html" . }}
-

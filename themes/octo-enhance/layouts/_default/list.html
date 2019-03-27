@@ -1,36 +1,38 @@
 {{ partial "header.html" . }}
 
-<div id="main">
-    <div id="content">
+<div id="main" class="container">
+    <div id="content" class="typo">
         <div>
             <article role="article">
                 <header>
                     {{ if (.Data.Plural) }}
-                    <h1>{{ .Data.Singular | title }}: {{ .Title }}</h1>
+                    <h2>{{ .Data.Singular | title }}: {{ .Title }}</h2>
                     {{ else }}
-                    <h1 class="entry-title {{ .Section }}">Blog Archive </h1>
+                    <h2 class="entry-title {{ .Section }}">Blog Archive </h2>
                     {{ end }}
                 </header>
                 <div id="blog-archives">
                     {{ range .Data.Pages.GroupByDate "2006" }}
-                        <h2>{{ .Key }}</h2>
+                        <h3>{{ .Key }}</h3>
                         {{- range .Pages }}
                         <article>
                             <header>
-                                <h1>
+                                <h4>
                                     <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                </h1>
-                                <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-                                    <span class="date">{{ .Date.Format "Jan" }}</span>
-                                    <span class="time">{{ .Date.Format "2" }}</span>
-                                </time>
+                                </h4>
+                                <div class="meta">
+                                    <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+                                        <span class="date">{{ .Date.Format "Jan" }}</span>
+                                        <span class="time">{{ .Date.Format "2" }}</span>
+                                    </time>
+                                    <span class="categories">
+                                        in
+                                        {{ range .Params.categories }}
+                                        <a class="category" href="{{ "/categories/"  }}{{ . | urlize }}">{{ . }}</a>
+                                        {{ end }}
+                                    </span>
+                                </div>
                             </header>
-                            <div class="categories">
-                                in
-                                {{ range .Params.categories }}
-                                <a class="category" href="{{ "/categories/"  }}{{ . | urlize }}">{{ . }}</a>
-                                {{ end }}
-                            </div>
                         </article>
                         {{- end }}
                     {{ end }}

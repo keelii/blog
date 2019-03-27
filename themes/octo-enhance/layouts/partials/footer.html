@@ -1,8 +1,25 @@
-<footer role="contentinfo">
+<footer id="footer" role="contentinfo" class="container">
     <p>
         Copyright &copy; {{ now.Format "2006" }} keelii
     </p>
 </footer>
+
+<script>
+
+(function(window, document) {
+    window.changeFont = function() {
+        var el = document.getElementById('font-family')
+        var font = localStorage.getItem('fontFamily')
+        
+        document.querySelectorAll('.typo').forEach(node => {
+            node.classList.remove('sans-serif', 'serif')
+            node.classList.add(font)
+        })
+        if (el) el.checked = font === 'sans-serif'
+    }
+    changeFont()
+})(window, document); 
+</script>
 
 {{ range .Site.Params.scripts }}
 <script src="{{ . }}"></script>

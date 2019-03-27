@@ -13,6 +13,7 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 ### 手艺
 
+* [Code Sketch](https://code-sketch.com/) 代码画板 一个你最初写代码的地方
 * [Zen Writer](https://zen-writer.com) 禅意写作 一个简洁、纯粹的 Markdown 写作应用
 * [Simple Note](https://note.crazy4code.com/notes) - 简单笔记 - 一个基于 Flask 的在线笔记本应用
 * [FE Player@zhihu](https://zhuanlan.zhihu.com/fe-player) 前端玩家 - 知乎专栏
@@ -22,7 +23,8 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 <style type="text/css">
 .ins-4096 { position: relative; }
-.ins-4096 img { display: none; position: absolute; left: 0; top: 2em; margin-left: -60px; box-shadow: 0 5px 28px 0 rgba(227, 227, 227, 1); }
+.ins-4096 img { display: none; position: absolute; left: 0; top: 2em; margin-left: -60px; box-shadow: 0 5px 28px 0 rgba(227, 227, 227, 1); max-width: initial; }
+.dark .ins-4096 img { box-shadow: 0 5px 28px 0 #3f3f3f; }
 .ins-4096.active img { display: block; }
 </style>
 
@@ -37,6 +39,6 @@ Weibo/Zhihu/Github/Wechat/Twitter: @keelii
 
 * 正文中文 - [思源宋体](https://source.typekit.com/source-han-serif/cn/) [下载 »](http://storage.jd.com/blogfont/SourceHanSerifCN.zip)
 * 正文中文 - [思源黑体](https://github.com/adobe-fonts/source-han-sans) [下载 »](http://storage.jd.com/blogfont/SourceHanSansCN.zip)
-* 英文正文 - [Crimson Text](https://fonts.google.com/specimen/Crimson+Text) [下载 »](http://storage.jd.com/blogfont/Crimson_Text.zip)
+* 英文正文 - [Source Serif Pro](https://fonts.google.com/specimen/Source+Serif+Pro) / [Crimson Text](https://fonts.google.com/specimen/Crimson+Text)
 * 英文代码 - [Latin Modern Mono](https://www.fontsquirrel.com/fonts/latin-modern-mono)
 

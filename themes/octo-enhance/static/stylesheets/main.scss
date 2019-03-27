@@ -1,5 +1,7 @@
 // @import './font.scss';
-@import 'http://localhost:3000/dist/joshua.css';
+// @import 'http://localhost:3000/dist/joshua.css';
+@import '../../../../../joshua.css/src/joshua.scss';
+
 @import './light-theme.scss';
 @import './dark-theme.scss';
 
@@ -31,7 +33,6 @@ $global-anim-tween: cubic-bezier(0, 0, 0.2, 1);
         --color-primary: #fff;
     }
 }
-
 
 $line-height: 24px;
 
@@ -70,6 +71,8 @@ $line-height: 24px;
         margin-top: 0;
         color: var(--color-grey);
     }
+    // .pagination {
+    // }
 }
 .hentry {
     h1 {
@@ -80,11 +83,8 @@ $line-height: 24px;
         color: var(--color-grey);
     }
     footer {
+        color: var(--color-grey);
         padding-top: $line-height * 2;
-        .meta {
-            display: flex;
-            justify-content: space-between;
-        }
     }
 }
 #category-list {

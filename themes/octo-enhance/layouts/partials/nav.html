@@ -1,12 +1,1 @@
-<nav role="navigation">
-    <ul class="main-navigation">
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | absURL }}">{{ .Name }}</a> </li>
-        {{ end }}
-        <li>
-            {{ if .RSSLink }}
-            <a href="{{ .Site.BaseURL }}atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
-            {{ end }}
-        </li>
-    </ul>
-</nav>
+

@@ -1,7 +1,24 @@
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
-<div id="main">
-    <div id="content">
+<script>
+    (function(window, document) {
+        window.changeTheme = function() {
+            var el = document.getElementById('dark-theme')
+            var dark = localStorage.getItem('dark')
+            if (dark === 'true') {
+                document.body.classList.add('dark')
+                if (el) el.checked = true
+            } else {
+                document.body.classList.remove('dark')
+                if (el) el.checked = false
+            }
+        }
+        changeTheme()
+    })(window, document);
+</script>
+
+<div id="main" class="container">
+    <div id="content" class="typo">
         <div style="padding-top:0;">
             <article class="hentry" role="article">
                 <header>
@@ -10,6 +27,7 @@
                         <time class="entry-date" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
                             <span class="date">{{ .Date.Format "2006-1-2" }}</span>
                             <span class="time">{{ .Date.Format "15:04 PM" }}</span>
+                            · <a href="{{ .Site.BaseURL }}">首页</a>
                         </time>
                     </p>
                 </header>
@@ -29,14 +47,16 @@
                         {{ end }}
                     </p>
                     
-                    <p class="meta">
+                    {{/*
+                    <div class="meta">
                         <span class="span">Last modified •</span>
                         <time class="entry-date" datetime="{{ .Lastmod.Format "2006-01-02 15:04:05" }}">
                             <span class="date">{{ .Lastmod.Format "2006-1-2" }}</span>
                             <span class="time">{{ .Lastmod.Format "15:04 PM" }}</span>
                         </time>
-                    </p>
-                    <p class="meta">
+                    </div>
+                    */}}
+                    <p class="meta salign">
                         {{ if .PrevInSection }}
                         <span class="basic-alignment left">
                             &laquo; <a href="{{ .PrevInSection.Permalink }}" title="Previous Post: {{ .PrevInSection.Title }}">{{ .PrevInSection.Title }}</a>

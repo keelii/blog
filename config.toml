@@ -23,17 +23,17 @@ DisqusShortname = "keelii-blog"
     category = "categories"
 
 [[menu.main]]
-    Name = "Blog"
+    Name = "首页"
     URL = "/"
     weight = 1
 
 [[menu.main]]
-    Name = "Archives"
+    Name = "归档"
     URL = "/archives"
     weight = 2
 
 [[menu.main]]
-    Name = "About"
+    Name = "关于"
     URL = "/about"
     weight = 3
 
@@ -49,7 +49,7 @@ DisqusShortname = "keelii-blog"
         # "/javascripts/post.js",
     ]
     pageStyles = [
-        "https://cdn.bootcss.com/highlight.js/9.13.1/styles/default.min.css"
+        # "https://cdn.bootcss.com/highlight.js/9.13.1/styles/default.min.css"
     ]
 
     scripts = [
@@ -64,7 +64,7 @@ DisqusShortname = "keelii-blog"
     styles = [
         # "//fonts.crazy4code.com/css?family=PT+Serif:regular,italic,bold,bolditalic",
         # "//fonts.crazy4code.com/css?family=PT+Sans:regular,italic,bold,bolditalic",
-        "/stylesheets/main.css"
+        "/stylesheets/main.min.css"
     ]
 
 [params.sidebar]

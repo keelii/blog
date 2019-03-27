@@ -1,5 +1,3 @@
-
-
 <!-- http://fontawesome.io icon fa-lg adapts it to size (at least it is supposed to) -->
 <ul class="subscription">
     {{ if or .Site.Params.rss .Site.Params.textrss }} {{ if .Site.Params.rss }}
@@ -8,7 +6,6 @@
     <li><a href="/index.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
     </li>
     {{ end }} {{ end }}
-
 </ul>
 
 {{ if isset .Site.Params "searchEngineURL" }}
