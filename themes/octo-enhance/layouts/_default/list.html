@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<div id="main" class="container">
+<div id="main">
     <div id="content" class="typo">
         <div>
             <article role="article">
@@ -8,7 +8,7 @@
                     {{ if (.Data.Plural) }}
                     <h2>{{ .Data.Singular | title }}: {{ .Title }}</h2>
                     {{ else }}
-                    <h2 class="entry-title {{ .Section }}">Blog Archive </h2>
+                    <h2 class="entry-title {{ .Section }}">归档 </h2>
                     {{ end }}
                 </header>
                 <div id="blog-archives">

@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<div id="main" class="container">
+<div id="main">
     <div id="content" class="typo">
         <div class="blog-index">
             {{ $paginator := .Paginate (where .Data.Pages "Type" "archives") }}
@@ -29,10 +29,10 @@
             {{ if gt $paginator.TotalPages 1 }}
             <p class="pagination salign">
                 {{ if $paginator.HasNext }}
-                <a class="btn outline secondary prev" href="{{ $paginator.Next.URL }}">← Prev</a>
+                <a class="btn outline primary prev" href="{{ $paginator.Next.URL }}">← Prev</a>
                 {{ end }}
                 {{ if $paginator.HasPrev }}
-                <a class="btn outline secondary next" href="{{ $paginator.Prev.URL }}">Next →</a>
+                <a class="btn outline primary next" href="{{ $paginator.Prev.URL }}">Next →</a>
                 {{ end }}
             </p>
             {{ end }}
