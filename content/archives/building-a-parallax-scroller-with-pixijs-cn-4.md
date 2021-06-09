@@ -3,7 +3,7 @@ title = "使用 Pixi.js 构建一个视差滚动器（第四篇）"
 isCJKLanguage = true
 categories = ["fe"]
 draft=true
-tags = ["game", "pixi.js"]
+tags = ["game", "pixi.js", "canvas"]
 date = "2019-03-17T19:20:04-07:00"
 +++
 
