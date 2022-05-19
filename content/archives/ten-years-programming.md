@@ -1,7 +1,7 @@
 +++
 title = "我做程序员这十年"
 isCJKLanguage = true
-date = "2022-05-19 18:04:47 +0800"
+date = "2022-05-19T18:59:45+08:00"
 categories = ["jd", "concept"]
 tags = ["life", "jd" ]
 +++
